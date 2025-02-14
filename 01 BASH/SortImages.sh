@@ -1,4 +1,5 @@
 #!/bin/bash
+## Ayudado IA
 
 # Verifica si dialog y exiftool están instalados
 if ! command -v dialog &> /dev/null; then
