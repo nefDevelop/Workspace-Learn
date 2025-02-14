@@ -1,0 +1,14 @@
+C:\Users\nef734\source\repos\pacDesarrollo-SecuenciaFibonacci\pacDesarrollo-SecuenciaFibonacci\obj\Debug\pacDesarrollo-SecuenciaFibonacci.csproj.AssemblyReference.cache
+C:\Users\nef734\source\repos\pacDesarrollo-SecuenciaFibonacci\pacDesarrollo-SecuenciaFibonacci\obj\Debug\pacDesarrollo-SecuenciaFibonacci.csproj.CoreCompileInputs.cache
+C:\Users\nef734\source\repos\pacDesarrollo-SecuenciaFibonacci\pacDesarrollo-SecuenciaFibonacci\bin\Debug\pacDesarrollo-SecuenciaFibonacci.exe.config
+C:\Users\nef734\source\repos\pacDesarrollo-SecuenciaFibonacci\pacDesarrollo-SecuenciaFibonacci\bin\Debug\pacDesarrollo-SecuenciaFibonacci.exe
+C:\Users\nef734\source\repos\pacDesarrollo-SecuenciaFibonacci\pacDesarrollo-SecuenciaFibonacci\bin\Debug\pacDesarrollo-SecuenciaFibonacci.pdb
+C:\Users\nef734\source\repos\pacDesarrollo-SecuenciaFibonacci\pacDesarrollo-SecuenciaFibonacci\obj\Debug\pacDesarrollo-SecuenciaFibonacci.exe
+C:\Users\nef734\source\repos\pacDesarrollo-SecuenciaFibonacci\pacDesarrollo-SecuenciaFibonacci\obj\Debug\pacDesarrollo-SecuenciaFibonacci.pdb
+Z:\pacDesarrollo-SecuenciaFibonacci\pacDesarrollo-SecuenciaFibonacci\bin\Debug\pacDesarrollo-SecuenciaFibonacci.exe.config
+Z:\pacDesarrollo-SecuenciaFibonacci\pacDesarrollo-SecuenciaFibonacci\bin\Debug\pacDesarrollo-SecuenciaFibonacci.exe
+Z:\pacDesarrollo-SecuenciaFibonacci\pacDesarrollo-SecuenciaFibonacci\bin\Debug\pacDesarrollo-SecuenciaFibonacci.pdb
+Z:\pacDesarrollo-SecuenciaFibonacci\pacDesarrollo-SecuenciaFibonacci\obj\Debug\pacDesarrollo-SecuenciaFibonacci.csproj.AssemblyReference.cache
+Z:\pacDesarrollo-SecuenciaFibonacci\pacDesarrollo-SecuenciaFibonacci\obj\Debug\pacDesarrollo-SecuenciaFibonacci.csproj.CoreCompileInputs.cache
+Z:\pacDesarrollo-SecuenciaFibonacci\pacDesarrollo-SecuenciaFibonacci\obj\Debug\pacDesarrollo-SecuenciaFibonacci.exe
+Z:\pacDesarrollo-SecuenciaFibonacci\pacDesarrollo-SecuenciaFibonacci\obj\Debug\pacDesarrollo-SecuenciaFibonacci.pdb

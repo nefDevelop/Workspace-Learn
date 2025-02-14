@@ -1,0 +1,7 @@
+C:\Users\nef734\source\repos\trianguloAstrid\trianguloAstrid\obj\Debug\trianguloAstrid.csproj.AssemblyReference.cache
+C:\Users\nef734\source\repos\trianguloAstrid\trianguloAstrid\obj\Debug\trianguloAstrid.csproj.CoreCompileInputs.cache
+C:\Users\nef734\source\repos\trianguloAstrid\trianguloAstrid\bin\Debug\trianguloAstrid.exe.config
+C:\Users\nef734\source\repos\trianguloAstrid\trianguloAstrid\bin\Debug\trianguloAstrid.exe
+C:\Users\nef734\source\repos\trianguloAstrid\trianguloAstrid\bin\Debug\trianguloAstrid.pdb
+C:\Users\nef734\source\repos\trianguloAstrid\trianguloAstrid\obj\Debug\trianguloAstrid.exe
+C:\Users\nef734\source\repos\trianguloAstrid\trianguloAstrid\obj\Debug\trianguloAstrid.pdb
