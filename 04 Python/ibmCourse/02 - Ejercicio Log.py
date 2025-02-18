@@ -41,5 +41,6 @@ def log (**Kargs):
 
     print (cadenaImprimir)
 
+input("""Que tipo de log grabamos? OPCIONES ([ERROR, LOG, INFO, NONE], "Mensaje entre comillas")""")
 
-log (tipo = "ERROR", mensaje = "Informacion de depuracion")
+log (tipo = , mensaje = Kargs])
