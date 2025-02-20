@@ -78,18 +78,74 @@ print (lista[-1])
 
 
 # 8. Escriba un programa para producir la serie Fibonacci en Python.
+def fibonacci(a):
+    array = []
+    
+    for i in range (0,a):
+        print (i)
+        if i > 1:
+            b = (array[i-1]) + (array[i-2])
+            array.append(b)
+        else:
+            array.append(i)
 
+    
+    
+    return array
+    
+# print (fibonacci(int(input("Cuantos numeros de la serie imprimimos? "))))
 
 
 # 9. Escriba un programa en Python para comprobar si un número es primo.
+def isPrimo(numero):
+    i = 1
+    
+    while (i < numero):
+        if (i != 1) and (i != numero):
+            if (numero % i == 0):
+                return False
+        i+=1
+    
+    return True
+
+
+# print (isPrimo(int(input("Que número comprobamos si es primo? "))))
 
 
 
 # 10. Escribir un programa en Python para comprobar si un número es capicúa. Es decir, si se lee igual de derecha a izquierda que de izquierda a derecha.
+def isCapicua(snumero):
+    if snumero == snumero[::-1]:
+        return True
+    else:
+        return False
+
+
+# print (isCapicua(input("Que número comprobamos si es capicuo? ")))
+
 
 
 
 # 11. Escribir un algoritmo de ordenación para un conjunto de datos numéricos en Python.
+
+# def sortDatos(datos):
+#     arraySorted = []
+    
+#     for i in datos:
+#         for b in datos: 
+        
+        
+
+datos = [7,4,1,56,3,98,2,5,7,23,79,35465,2,7,9,2,6]
+print (datos)
+
+datos.sort()
+print (datos)
+
+
+
+
+
 
 
 try:
