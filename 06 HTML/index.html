@@ -10,13 +10,38 @@
   <p id="description">Rellena el formulario para formar parte de la comunidad.</p>
 
   <form id="survey-form">
-    <input id="name" required ></input>
-    <input id="email" required type="email"></input>
-    <input id="number" type="number" min=16 max=99></input>
+    <label id="name-label">Nombre: <input id="name" required placeholder="Jhon/Jane Doe"></input></label>
+    <label id="email-label">Email:<input id="email" required placeholder="email@domain.com" type="email"></input></label>
+    <label id="number-label">Edad:<input id="number" placeholder="16" type="number" min=16 max=99></input></label>
+
+    <label >Género:
+    <select id="dropdown">
+      <option>Hombre</option>
+      <option selected>Mujer</option>
+    </select>
+    </label>
+
+    <fieldset><legend>Preferencias</legend>
+      <input type=checkbox value="likeJs" name="Js">Me gusta JavaScript</input>
+      <input type=checkbox value="likeHtml" name="Html">Me gusta Html</input>
+    </fieldset>
+
+
+    <fieldset><legend>GPD</legend>
+      <input type=radio value="yes" name="yes">Las acepto</input>
+      <input type=radio value="no" name="no">No</input>
+    </fieldset>
+
+
+    <fieldset><legend>Condiciones</legend>
+      <input type=radio value="yes" name="yes">Las acepto</input>
+      <input type=radio value="no" name="no">No</input>
+    </fieldset>
+
+    <textarea placeholder="Cuentanos algo sobre ti."></textarea>
+
+    <button id="submit" type=submit>Enviar</button>
 
   </form>
-
-
-
 
 </body>
