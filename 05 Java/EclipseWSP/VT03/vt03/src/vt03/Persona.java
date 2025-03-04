@@ -20,6 +20,10 @@ public class Persona {
     public String getNombre(){ return this.nombre; }
     public void setNombre(String n){ this.nombre = n; }
 
+
+    
+
+
     public void mostrarDatos(){
         System.out.println("Nombre: " + this.nombre);
         System.out.println("Apellidos: " + this.apellidos1 +" "+this.apellidos2); 
