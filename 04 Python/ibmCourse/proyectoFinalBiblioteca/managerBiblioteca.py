@@ -1,7 +1,4 @@
-# Enunciado de la práctica
-
-# Título: Sistema de Gestión de Biblioteca
-# Descripción: Eres el desarrollador de un sistema básico de gestión para una biblioteca. Debes crear un programa en Python que permita registrar libros y gestionar préstamos a usuarios. El programa debe cumplir con los siguientes requisitos:
+import string
 
 # 1. Clase Libro:
 # • Crea una clase Libro con los atributos titulo (str), autor (str), isbn (str) y disponible (bool, inicialmente True).
@@ -15,41 +12,29 @@
 class Libro: 
     
     # Definimos el constructor aceptando titulo como str, autor como str, isbn como str y displonible como booleano.
-    def __init__(self, titulo="", autor="", isbn="", disponible=True):
-        self.titulo = titulo
-        self.autor = autor
-        self.isbn = isbn
-        self.disponible = disponible
+    def __init__():
+        pass
 
     # Método agregar
-    def agregar(self):
-        print("-- Datos del libro a agregar:")
-        self.titulo = input("- Título: ")
-        self.autor = input("- Autor: ")
-        self.isbn = input("- ISBN: ")
+    def agregar():
+        pass
 
-    def prestar(self):
-        if self.disponible:
-            self.disponible = False
-            print(f"El libro '{self.titulo}' ha sido prestado.")
-        else:
-            print(f"El libro '{self.titulo}' no está disponible para ser prestado.")
-
-    def devolver(self):
-        if not self.disponible:
-            self.disponible = True
-            print(f"El libro '{self.titulo}' ha sido devuelto.")
-        else:
-            print(f"El libro '{self.titulo}' ya estaba disponible.")
-
-    def mostrar(self):
-        return f"{self.titulo} - {self.autor} - ISBN: {self.isbn} - Disponible: {'Sí' if self.disponible else 'No'}"
-
-    def buscar(self, isbn):
-        if self.isbn == isbn:
-            print(f"Libro encontrado: {self.mostrar()}")
-        else:
-            print("ro no encontrado.")
+    # Método prestar
+    def prestar():
+        pass
+    
+    # Método devolver
+    def devolver():
+        pass
+    
+    # Método mostrar
+    def mostrar():
+        pass
+    
+    # Método buscar
+    def buscar():
+        pass
+    
 
 
 # 2. Gestión del inventario: 
@@ -61,6 +46,34 @@ class Libro:
 # • d) Mostrar todos los libros y su estado (disponible o no).
 # • e) Salir del programa.
 
+# Crear menú
+def showMenu():
+    
+    # Generamos la estructura del menu
+    print ("\nBienvenido al Sistema de Gestión de Biblioteca\n")
+    print ("1. Agregar libro.")
+    print ("2. Prestar un libro.")
+    print ("3. Devolver un libro.")
+    print ("4. Mostrar todos los libros.")
+    print ("5. Buscar un libro.")
+    print ("6. Salir.\n\n")
+    
+    # cogemos la opcion
+    opcion = input("Elige una opción: ")
+    
+    # Mediante recursividad, comparamos si opcion es válido. De no serlo, llamamos al menu. Si es válido, devolvemos valor.
+    if (opcion.isdigit() == False):
+            print("\nPor favor, ingrese una opción correcta. \n")
+            showMenu()    
+    else:
+        opcion = int(opcion)      
+        if (opcion < 1 or opcion > 6):
+            print("\nPor favor, ingrese una opción correcta. \n")
+            showMenu()
+        else:
+            return str(opcion)
+
+    
 # 3. Condiciones:
 # • Valida que el ISBN ingresado exista en la lista antes de prestar o devolver un libro.
 # • Si el usuario ingresa una opción inválida en el menú, muestra un mensaje de error y vuelve a pedir una opción. 
@@ -110,8 +123,35 @@ class Libro:
 # • devolver
 # • Mostrar
 # • buscar
+
 # El ejercicio se entregará en un solo archivo con extensión .py
 # El nombre de la clase, atributos y métodos será exactamente el que se pide en el enunciado.
 # Solo se admitirá una sola subida por alumno. En el caso de que un alumno suba más de una versión del ejercicio, solo se calificará la primera que se subiese, ignorando el sistema las demás. Por lo que se recomienda encarecidamente que se revisen detalladamente los ejercicios antes de proceder a su entrega. 
 # Cualquier ejercicio que no cumpla escrupulosamente los requisitos pedidos NO SERÁ CORREGIDO.
 # Todo aquel ejercicio que sea entregado posteriormente a las 00:00 horas del día no será corregido por el sistema.
+
+# Creamos la lista donde se guardaran los libros
+biblioteca = []
+
+
+# Realizamos un bucle do while, obligamos a entrar la primera vez con la variable
+opcion = "1"
+
+# Entra y no ponemos if de opcion seis, el condicional del bucle hace su funcion.
+while (opcion != "6"):
+    
+    # mostramos menu y guardamos seleccion que devuelva
+    opcion = showMenu()
+    
+    if (opcion == "1"):
+        pass
+    elif (opcion == "2"):
+        pass
+    elif (opcion == "3"):
+        pass
+    elif (opcion == "4"):
+        pass
+    elif (opcion == "5"):
+        pass
+
+
