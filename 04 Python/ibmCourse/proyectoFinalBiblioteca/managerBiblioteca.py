@@ -1,157 +1,155 @@
-import string
+#import string
 
-# 1. Clase Libro:
-# • Crea una clase Libro con los atributos titulo (str), autor (str), isbn (str) y disponible (bool, inicialmente True).
-# • Incluye un método agregar() que permita introducir un nuevo libro con sus características. 
-# • Incluye un método prestar() que cambie el estado de disponible a False si el libro está disponible, y muestre un mensaje si ya está prestado.
-# • Incluye un método devolver() que cambie el estado de disponible a True si estaba prestado, y muestre un mensaje si ya estaba disponible.
-# • Incluye un método mostrar()  que devuelva una lista con todos los libros de la biblioteca y los muestre en pantalla con todos sus datos y diga si estás disponible o no.
-# • Incluye un método buscar() que busque un libro en concreto por su ISBM y lo muestre en pantalla con todos sus datos y diga si está disponible o no.
 
 # Creamos la clase libro
-class Libro: 
+class Libro(): 
     
     # Definimos el constructor aceptando titulo como str, autor como str, isbn como str y displonible como booleano.
-    def __init__():
-        pass
+    def __init__(self):
+        self.titulo = ""
+        self.autor = ""
+        self.isbn = ""
+        self.disponible = True
+        
+    # Setter de Disponible
+    def setDisponible(self, bool):
+        self.disponible = bool
 
     # Método agregar
-    def agregar():
-        pass
+    def agregar(self, titulo, autor, isbn):
+        self.titulo = titulo
+        self.autor = autor
+        self.isbn = isbn
+        
+        # Agregamos a la biblioteca el objeto libro
+        biblioteca.append(self)
 
     # Método prestar
-    def prestar():
-        pass
-    
+    def prestar(self, isbn):
+        while (existIsbn(isbn) == False):
+            isbn = input("Inserte un ISBN correcto o que exista en la biblioteca: ")
+            
+        for libro in biblioteca:
+            if (int(isbn) == libro.isbn):
+                libro.setDisponible(False)    
+                # Libro prestado con éxito.
+                    
     # Método devolver
-    def devolver():
-        pass
+    def devolver(self, isbn):
+        while (existIsbn(isbn) == False):
+            isbn = input("Inserte un ISBN correcto o que exista en la biblioteca: ")
+            
+        for libro in biblioteca:
+            if (int(isbn) == libro.isbn):
+                libro.setDisponible(True)         
+  
     
-    # Método mostrar
-    def mostrar():
-        pass
-    
+    # Método mostrar FORMATO --> - El Quijote (Cervantes) - ISBN: 12345 - Disponible: Sí
+    def mostrar(self):
+        for i in biblioteca:
+            #print (f"- {i.titulo} ({i.autor}) - ISBN: {i.isbn} - Disponible: {i.disponible}" )
+            print ("- %s (%s) - ISBN: %i - Disponible: %s" %(i.titulo, i.autor, i.isbn, "Si" if i.disponible == True else "No"))
+
     # Método buscar
-    def buscar():
-        pass
-    
+    def buscar(self, isbn):
+        while (existIsbn(isbn) == False):
+            isbn = input("Inserte un ISBN correcto o que exista en la biblioteca: ")
+            
+        for libro in biblioteca:
+            if (int(isbn) == libro.isbn):
+                print ("- Libro: %s - Autor: (%s) - ISBN: %i - Disponible: %s" %(libro.titulo, libro.autor, libro.isbn, "Si" if libro.disponible == True else "No"))
+     
 
-
-# 2. Gestión del inventario: 
-# • Usa una lista para almacenar objetos de la clase Libro.
-# • Implementa un bucle que permita al usuario interactuar con el programa mediante un menú con las siguientes opciones: 
-# • a) Agregar un nuevo libro ingresando título, autor e ISBN.
-# • b) Prestar un libro buscando por ISBN.
-# • c) Devolver un libro buscando por ISBN.
-# • d) Mostrar todos los libros y su estado (disponible o no).
-# • e) Salir del programa.
-
-# Crear menú
+# Funcion para la eleccion del menu
 def showMenu():
-    
-    # Generamos la estructura del menu
-    print ("\nBienvenido al Sistema de Gestión de Biblioteca\n")
-    print ("1. Agregar libro.")
-    print ("2. Prestar un libro.")
-    print ("3. Devolver un libro.")
-    print ("4. Mostrar todos los libros.")
-    print ("5. Buscar un libro.")
-    print ("6. Salir.\n\n")
-    
-    # cogemos la opcion
-    opcion = input("Elige una opción: ")
-    
-    # Mediante recursividad, comparamos si opcion es válido. De no serlo, llamamos al menu. Si es válido, devolvemos valor.
-    if (opcion.isdigit() == False):
-            print("\nPor favor, ingrese una opción correcta. \n")
-            showMenu()    
-    else:
-        opcion = int(opcion)      
-        if (opcion < 1 or opcion > 6):
-            print("\nPor favor, ingrese una opción correcta. \n")
-            showMenu()
-        else:
-            return str(opcion)
+    # Bucle infinito hasta que el número sea correcto
+    while True:
+        
+        # Cogemos opcion
+        opcion = input("Elige una opción (1-6): ")
+        
+        # Si es digito y si es un numero del menu retornamos
+        if (opcion.isdigit()):
+            opcion = int(opcion)
+            if (opcion >= 1) and (opcion <= 6):
+                return opcion
+        
+        print("\nPor favor, ingrese una opción válida.\n")
 
     
-# 3. Condiciones:
-# • Valida que el ISBN ingresado exista en la lista antes de prestar o devolver un libro.
-# • Si el usuario ingresa una opción inválida en el menú, muestra un mensaje de error y vuelve a pedir una opción. 
 
 
-# Entregable:
-# • Un script en Python que implemente todas las funcionalidades descritas.
-# • El código debe ser claro, con comentarios explicativos y usando buenas prácticas.
-# Ejemplo de uso. Al ejecutar el programa el resultado debería ser como se ve en el siguiente ejemplo:
+# Hacemos verificacion de que sean digitos, transformamos y retornamos
+def isValidIsbn(message):
+    isbn = input(message)
+   
+    while (str(isbn).isdigit() == False):
+        isbn = input(message)
 
-# Bienvenido al Sistema de Gestión de Biblioteca
-# 1. Agregar libro
-# 2. Prestar libro
-# 3. Devolver libro
-# 4. Mostrar libros
-# 5. Buscar
-# 6. Salir
+    return int(isbn)
+    
+# Ejercicio • Valida que el ISBN ingresado exista en la lista antes de prestar o devolver un libro.
+def existIsbn(isbn):
+    for libro in biblioteca:
+        # print (libro.isbn)
 
-# Elige una opción: 1
+        if (libro.isbn == int(isbn)):
+            return True
+    
+    return False    
 
-# Título: El Quijote
-# Autor: Cervantes
-# ISBN: 12345
-# Libro agregado con éxito.
-
-# Elige una opción: 4
-# - El Quijote (Cervantes) - ISBN: 12345 - Disponible: Sí
-
-# Elige una opción: 2
-# Ingresa el ISBN: 12345
-# Libro prestado con éxito.
-
-# Elige una opción: 4
-# - El Quijote (Cervantes) - ISBN: 12345 - Disponible: No
-
-# Consideraciones a tener en cuenta:
-# Se creará la clase:
-# • Libro
-# Con los atributos:
-# • Titulo
-# • Autor
-# • isbn
-# • disponible
-# Se crearán los métodos:
-# • agregar
-# • prestar
-# • devolver
-# • Mostrar
-# • buscar
-
-# El ejercicio se entregará en un solo archivo con extensión .py
-# El nombre de la clase, atributos y métodos será exactamente el que se pide en el enunciado.
-# Solo se admitirá una sola subida por alumno. En el caso de que un alumno suba más de una versión del ejercicio, solo se calificará la primera que se subiese, ignorando el sistema las demás. Por lo que se recomienda encarecidamente que se revisen detalladamente los ejercicios antes de proceder a su entrega. 
-# Cualquier ejercicio que no cumpla escrupulosamente los requisitos pedidos NO SERÁ CORREGIDO.
-# Todo aquel ejercicio que sea entregado posteriormente a las 00:00 horas del día no será corregido por el sistema.
-
-# Creamos la lista donde se guardaran los libros
+# Creamos la lista donde se guardaran los objetos libros
 biblioteca = []
 
+# Generamos la estructura del menu que segun el ejemplo no hay que reiterar.
+print ("\nBienvenido al Sistema de Gestión de Biblioteca\n")
+print ("1. Agregar libro.")
+print ("2. Prestar un libro.")
+print ("3. Devolver un libro.")
+print ("4. Mostrar todos los libros.")
+print ("5. Buscar un libro.")
+print ("6. Salir.\n\n")
 
 # Realizamos un bucle do while, obligamos a entrar la primera vez con la variable
 opcion = "1"
 
 # Entra y no ponemos if de opcion seis, el condicional del bucle hace su funcion.
-while (opcion != "6"):
+while (str(opcion) != "6"):
     
     # mostramos menu y guardamos seleccion que devuelva
     opcion = showMenu()
     
-    if (opcion == "1"):
-        pass
-    elif (opcion == "2"):
-        pass
-    elif (opcion == "3"):
-        pass
-    elif (opcion == "4"):
-        pass
-    elif (opcion == "5"):
-        pass
+    if (str(opcion) == "1"): #Agregar
+        # Creamos objeto Libro y cojemos los datos para agregar un libro nuevo
+        libro = Libro()
+        titulo = input("Título: ")
+        autor = input("Autor: ")
+        
+        isbn = isValidIsbn("ISBN: ")    
+
+        # Comprobamos que si ya existe el ISBN se elija otro
+        while (existIsbn(isbn) != False):
+            isbn = isValidIsbn("Ya existe. ISBN: ")    
+
+        # Agregamos libro a biblioteca
+        libro.agregar(titulo, autor, isbn)
+        print("Libro agregado con éxito. \n")
+        
+    elif (str(opcion) == "2"): #prestar
+        isbn = isValidIsbn("Ingresa el ISBN: ")
+        libro.prestar(isbn)
+        print("Libro prestado con éxito\n")
+    
+    elif (str(opcion) == "3"): #Devolver
+        isbn = isValidIsbn("Ingresa el ISBN: ")
+        libro.devolver(isbn)
+        print("Libro devuelto con éxito.\n")
+        
+    elif (str(opcion) == "4"): #Mostrar
+        libro.mostrar()
+        
+    elif (str(opcion) == "5"): #Buscar
+        isbn = isValidIsbn("Ingresa el ISBN: ")
+        libro.buscar(isbn)
 
 

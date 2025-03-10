@@ -1,6 +1,6 @@
 package vt03;
 
-public class Persona {
+public class Personas {
     private String nombre;
     private String apellidos1;
     private String apellidos2;
@@ -8,7 +8,7 @@ public class Persona {
     private int edad;
     private String direccion;
 
-    public Persona (String nombre, String apellidos1, String apellidos2, char sexo, int edad, String direccion){ 
+    public Personas (String nombre, String apellidos1, String apellidos2, char sexo, int edad, String direccion){ 
         this.nombre = nombre;
         this.apellidos1 = apellidos1;
         this.apellidos2 = apellidos2;
