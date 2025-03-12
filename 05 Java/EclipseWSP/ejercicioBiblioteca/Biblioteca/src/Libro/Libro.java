@@ -1,5 +1,6 @@
 package Libro;
 
+// Creamos clase libro y su constructor
 public class Libro {
     private String isbn;
     private String autor;
@@ -17,12 +18,16 @@ public class Libro {
         this.numPaginas = numPaginas;
     }
 
+    //Creamos metodo para mostrar la informacion del libro
     public void showLibro (){
+        System.out.println("=====Libro=====");
         System.out.println(this.isbn);
         System.out.println(this.autor);
         System.out.println(this.titulo);
         System.out.println(this.editorial);
         System.out.println(this.anyoPublicacion);
         System.out.println(this.numPaginas);
+        System.out.println("===============");
+
     }
 }
