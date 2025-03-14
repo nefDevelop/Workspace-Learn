@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starpage - </title> <!--json titulo-->
     <link rel="stylesheet" href="css/myStyles.css">
+    <link rel="stylesheet" href="css/w3css.css">
+
     <!-- <link rel="stylesheet" href="./css/bootstrap.css"> Bootstrap -->
-    <script src="js/script_config.js"></script>
+    <script src="script_config.js" defer></script>
 </head>
 
 <body>
@@ -15,14 +17,37 @@
             <a href="#" class="w3-bar-item w3-button">Bookmark</a>
             <a href="#" class="w3-bar-item w3-button">Test</a>
             <a href="#" class="w3-bar-item w3-button">Search</a>
+            <a href="#" class="w3-bar-item w3-button w3-green w3-right">Go</a>
+            <input type="text" class="w3-bar-item w3-right" placeholder="Buscar..." style="display:inline-block; width: 60%; max-width: 300px;">
+        </div>
+        <!-- Contenedor principal -->
+         
+        <h1>Bienvenido de nuevo, </h1>
+
+        <div class="w3-row w3-display-middle w3-padding-16">
+            <div class="w3-col w3-quarter image-section">
+                <img class="w3-image" src="img/01.png" alt="background"></img>
+            </div>
+            <div id="mainlinks" class="w3-col text-section w3-center w3-threequarter"></div>
+        </div>
+    <div class="down_bar_container w3-display-bottommiddle w3-bar w3-mobile">
+        <div class="down_bar w3-display-bottommiddle w3-bar w3-mobile w3-gray">
+            <a href="#" class="w3-bar-item w3-button">Inicio</a>
+            <a href="#" class="w3-bar-item w3-button">Bookmark</a>
+            <a href="#" class="w3-bar-item w3-button">Test</a>
+            <div class="w3-dropdown-hover">
+                <button class="w3-button"> Colors</button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="#" class="w3-bar-item w3-button">Color1</a>
+                    <a href="#" class="w3-bar-item w3-button">Color1</a>
+                    <a href="#" class="w3-bar-item w3-button">Color1</a>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Contenedor principal -->
-    <div id="main_container">
-        <script>cargarConfig();</script>
-    </div>
 
-    <div id="second_container"></div>
 
-    <footer></footer>
+
+    <div id="time" class="time"></div>
 </body>

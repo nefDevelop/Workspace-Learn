@@ -1,11 +1,26 @@
 {
-    "settings": {
-      "theme": "dark",
-      "language": "es"
+  "links": {
+    "Externos": {
+      "Bandeja Gmail": "https://www.google.com",
+      "Github": "https://github.com"
+
     },
-    "links": {
-      "google": "https://www.google.com",
-      "github": "https://github.com"
+    "Sd": {
+      "Google": "https://www.google.com",
+      "Github": "https://github.com"
+
+    },
+    "Host": {
+      "Archivo": "https://archivo.734038.xyz",
+      "Github": "https://github.com"
+
     }
+  },
+  "settings": {
+    "theme": "dark",
+    "language": "es",
+    "columns": 3,
+    "nombre": "Nef734"
+  }
   }
   
