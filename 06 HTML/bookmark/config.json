@@ -10,17 +10,48 @@
       "Github": "https://github.com"
 
     },
-    "Host": {
+    "host": {
       "Archivo": "https://archivo.734038.xyz",
-      "Github": "https://github.com"
-
+      "Syncthing": "https://sync.734038.xyz",
+      "Biblioteca": "https://archivo.734038.xyz",
+      "Git": "https://git.734038.xyz",
+      "Album": "https://album.734038.xyz",
+      "Podcast": "https://podcast.734038.xyz",
+      "Musica": "https://loud.734038.xyz",
+      "Code": "https://code.734038.xyz",
+      "qbit": "https://qbit.734038.xyz",
+      "dav": "https://dav.734038.xyz",
+      "www": "https://www.734038.xyz",
+      "podder": "https://podder.734038.xyz",
+      "hoarder": "https://hoarder.734038.xyz",
+      "itt": "https://itt.734038.xyz",
+      "term": "https://term.734038.xyz",
+      "pdfstudy": "https://pdfstudy.734038.xyz",
+      "alist": "https://alist.734038.xyz",
+      "readeck": "https://readeck.734038.xyz",
+      "pdfedit": "https://pdfedit.734038.xyz",
+      "memo": "https://term.734038.xyz",
+      "lnkwarden": "https://lnkwarden.734038.xyz",
+      "term": "https://term.734038.xyz",
+      "md": "https://md.734038.xyz"
+    },
+    "local": {
+      "readerr": "https://192.168.30.30:8607",
+      "prowlarr": "https://192.168.30.30:8605",
+      "slskd": "https://192.168.30.30:8604",
+      "radarr": "https://192.168.30.30:8608",
+      "lidarr": "https://192.168.30.30:8603",
+      "jellyseer": "https://192.168.30.30:8606",
+      "penpot": "https://192.168.30.30:9001",
+      "gonic": "https://192.168.30.30:88106",
+      "jellyfin": "https://192.168.30.30:8105"
     }
   },
   "settings": {
     "theme": "dark",
     "language": "es",
     "columns": 3,
-    "nombre": "Nef734"
+    "name": "Nef734"
   }
   }
   

@@ -6,41 +6,47 @@
     <title>Starpage - </title> <!--json titulo-->
     <link rel="stylesheet" href="css/myStyles.css">
     <link rel="stylesheet" href="css/w3css.css">
-
-    <!-- <link rel="stylesheet" href="./css/bootstrap.css"> Bootstrap -->
     <script src="script_config.js" defer></script>
 </head>
 
 <body>
-    <div class="w3-bar w3-mobile w3-black">
-            <a href="#" class="w3-bar-item w3-button">Inicio</a>
-            <a href="#" class="w3-bar-item w3-button">Bookmark</a>
-            <a href="#" class="w3-bar-item w3-button">Test</a>
-            <a href="#" class="w3-bar-item w3-button">Search</a>
-            <a href="#" class="w3-bar-item w3-button w3-green w3-right">Go</a>
-            <input type="text" class="w3-bar-item w3-right" placeholder="Buscar..." style="display:inline-block; width: 60%; max-width: 300px;">
-        </div>
-        <!-- Contenedor principal -->
-         
-        <h1>Bienvenido de nuevo, </h1>
+    <div class="w3-bar w3-mobile w3-teal">
+        <a href="#" class="w3-bar-item w3-button">Inicio</a>
+        <a href="#" class="w3-bar-item w3-button">Bookmark</a>
+        <a href="#" class="w3-bar-item w3-button">Test</a>
+        <a href="#" class="w3-bar-item w3-button">Search</a>
+        <a href="#" class="w3-bar-item w3-button w3-teal w3-right">Go</a>
+        <input type="text" class="w3-bar-item w3-right w3-teal" placeholder="Buscar...">
+    </div>
 
+        <!-- Contenedor principal -->
+    <h1>Bienvenido de nuevo, <a id="divName"></a></h1>
         <div class="w3-row w3-display-middle w3-padding-16">
-            <div class="w3-col w3-quarter image-section">
-                <img class="w3-image" src="img/01.png" alt="background"></img>
-            </div>
-            <div id="mainlinks" class="w3-col text-section w3-center w3-threequarter"></div>
+        <div class="w3-col w3-quarter image-section">
+            <img class="w3-image" src="img/01.png" alt="background">
         </div>
+        <div id="mainlinks" class="w3-col text-section w3-center w3-threequarter">
+        </div>
+    </div>
+    <div id="time" class="time"></div>
+
     <div class="down_bar_container w3-display-bottommiddle w3-bar w3-mobile">
-        <div class="down_bar w3-display-bottommiddle w3-bar w3-mobile w3-gray">
+        <div class="down_bar w3-display-bottommiddle w3-bar w3-mobile w3-gray"> <!--Barrra inferior-->
             <a href="#" class="w3-bar-item w3-button">Inicio</a>
             <a href="#" class="w3-bar-item w3-button">Bookmark</a>
             <a href="#" class="w3-bar-item w3-button">Test</a>
             <div class="w3-dropdown-hover">
-                <button class="w3-button"> Colors</button>
+                <button type="submit" class="w3-button" onclick="myFunction()"> C </button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
                     <a href="#" class="w3-bar-item w3-button">Color1</a>
                     <a href="#" class="w3-bar-item w3-button">Color1</a>
                     <a href="#" class="w3-bar-item w3-button">Color1</a>
+                </div>
+            </div>
+            <div class="circle-selector w3-dropdown-hover">
+                <button type="submit" class="w3-button"></button>
+                <div class="w3-dropdown-content w3-bar-block w3-right">
+                    <a href="#" class="dracula w3-bar-item w3-button"><div class="circle"></div></a>
                 </div>
             </div>
         </div>
@@ -49,5 +55,4 @@
 
 
 
-    <div id="time" class="time"></div>
 </body>

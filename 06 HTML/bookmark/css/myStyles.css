@@ -1,8 +1,20 @@
 
 /* MIS CSS */
 
-body{
-	font-family: monospace;
+:root {
+  --bg-color: #2E3440;
+  --text-color: #D8DEE9;
+  --card-bg: #3B4252;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+#divName{
+  color: rgb(43, 98, 227);
+  display: inline;
 }
 
 .time {
@@ -56,8 +68,9 @@ h3 {
 }
 
 .link-item:hover {
-  font-weight: 900;
+  font-weight: bold;
 }
+
 
 .down_bar {
   opacity: 0;
@@ -89,5 +102,13 @@ h3 {
   }
   .text-section {
       width: 60%;
+  }
+}
+
+/* Estilos para el modo oscuro */
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color: black;
+      color: white;
   }
 }

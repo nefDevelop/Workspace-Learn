@@ -64,3 +64,19 @@ function updateClock() {
 }
 
 document.addEventListener("DOMContentLoaded", updateClock);
+
+
+async function showName() {
+    const response = await fetch('config.json'); // Cargar JSON
+    if (!response.ok) throw new Error(`Error al cargar JSON: ${response.status}`);
+
+    const data = await response.json(); // Convertir a objeto JS
+    // console.log(data); // Ver en consola
+
+    const targetElement = document.getElementById("divName"); 
+
+    targetElement.textContent = data.settings.name;  // Agregar título dentro de la columna
+
+}
+
+document.addEventListener("DOMContentLoaded", showName);
