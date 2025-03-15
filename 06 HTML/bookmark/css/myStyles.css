@@ -43,10 +43,10 @@ body {
   text-align:left;
 }
 
-.image-section{
-  background-size: cover;
-  background-position: center;
+
+.text-section{
   height: 200px;
+  background-color: blue;
 }
 
 h3:before{
