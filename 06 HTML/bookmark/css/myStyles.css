@@ -1,0 +1,88 @@
+
+/* MIS CSS */
+
+:root {
+  --bg-color: #2E3440;
+  --text-color: #D8DEE9;
+  --card-bg: #3B4252;
+}
+
+#divName{
+  color: rgb(43, 98, 227);
+  display: inline;
+}
+
+.time {
+  display:block;
+	color:#FFFFFF;
+	font-family: monospace;
+	font-size:15px;
+  left: 35px;
+  bottom: 52px;
+}
+
+
+/* Create three equal columns that floats next to each other */
+#mainlinks {
+  display: flex;
+  flex-wrap: wrap; /* Para que las columnas se acomoden bien */
+}
+
+.round {
+  border: 1px solid;
+  border-radius: 14px !important;
+}
+
+
+.link-item {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 100;
+  margin-bottom: 5px;
+}
+
+.link-item:hover {
+  font-weight: bold;
+}
+
+
+.down_bar {
+  opacity: 0;
+  pointer-events: none; /* Evita que sea interactuable cuando está oculto */
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Hacer hover sobre el contenedor en lugar del span */
+.down_bar_container:hover .down_bar {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Ajustar tamaño del contenedor para que el hover sea más fácil */
+.down_bar_container {
+  min-height: 50px; /* Ajusta según necesites */
+}
+
+
+
+@media (min-width: 600px) {
+  .w3-row {
+      display: flex;
+      flex-direction: row-reverse; /* Imagen a la derecha en pantallas grandes */
+  }
+  .image-section {
+      height: auto;
+      width: 40%;
+  }
+  .text-section {
+      width: 60%;
+  }
+}
+
+/* Estilos para el modo oscuro */
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color: black;
+      color: white;
+  }
+}
