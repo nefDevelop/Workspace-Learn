@@ -7,10 +7,6 @@
   --card-bg: #3B4252;
 }
 
-body {
-  background-color: black;
-  color: white;
-}
 
 #divName{
   color: rgb(43, 98, 227);
@@ -33,32 +29,8 @@ body {
   flex-wrap: wrap; /* Para que las columnas se acomoden bien */
 }
 
-.column {
-  display: flex;
-  flex-wrap: nowrap; /* Para que las columnas se acomoden bien */
-  flex-direction: column;
-  background: rgb(45, 45, 45);
-  padding: 19px;
-  width: auto;
-  text-align:left;
-}
 
 
-.text-section{
-  height: 200px;
-  background-color: blue;
-}
-
-h3:before{
-  content:"~> "
-}
-
-h3 {
-  margin-bottom: 10px;
-  font-size: 1em;
-  text-align:left;
-  color: #61dafb;
-}
 
 .link-item {
   text-decoration: none;

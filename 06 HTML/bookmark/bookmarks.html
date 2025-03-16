@@ -10,36 +10,39 @@
 </head>
 
 <body>
-    <div class="w3-bar w3-mobile w3-teal">
+    <div class="w3-bar w3-mobile">
         <a href="#" class="w3-bar-item w3-button">Inicio</a>
         <a href="#" class="w3-bar-item w3-button">Bookmark</a>
         <a href="#" class="w3-bar-item w3-button">Test</a>
         <a href="#" class="w3-bar-item w3-button">Search</a>
-        <a href="#" class="w3-bar-item w3-button w3-teal w3-right">Go</a>
-        <input type="text" class="w3-bar-item w3-right w3-teal" placeholder="Buscar...">
+        <a href="#" class="w3-bar-item w3-button w3-right">Go</a>
+        <input type="text" class="w3-bar-item w3-right " placeholder="Buscar...">
     </div>
 
-        <!-- Contenedor principal -->
+    <!-- Contenedor principal -->
     <h1>Bienvenido de nuevo, <a id="divName"></a></h1>
-        <div class="w3-mobile w3-display-middle">
-            <div id="mainlinks" class="w3-col text-section"></div>
-            <div class="w3-rest image-section">
-                <div class=""><img class="w3-image" src="img/01.png" alt="background"></div>
-            </div>
+
+    <div class="w3-mobile w3-row w3-display-middle">
+        <div id="mainlinks" class="w3-mobile w3-col s9 w3-dark-grey w3-center"></div>
+        <div class="w3-mobile w3-col s3 w3-green w3-center">
+            <img src="img/01.png"  style="height:400px; max-height:500px" alt="background">
         </div>
+    </div>
+
+
     <div id="time" class="time"></div>
 
     <div class="down_bar_container w3-display-bottommiddle w3-bar w3-mobile">
         <div class="down_bar w3-display-bottommiddle w3-bar w3-mobile w3-gray"> <!--Barrra inferior-->
-            <a href="#" class="w3-bar-item w3-button">Inicio</a>
-            <a href="#" class="w3-bar-item w3-button">Bookmark</a>
-            <a href="#" class="w3-bar-item w3-button">Test</a>
-            <div class="w3-dropdown-hover">
-                <button type="submit" class="w3-button" onclick="myFunction()"> C </button>
+            <a href="#" class="w3-bar-item w3-button w3-mobile">Inicio</a>
+            <a href="#" class="w3-bar-item w3-button w3-mobile">Bookmark</a>
+            <a href="#" class="w3-bar-item w3-button w3-mobile">Test</a>
+            <div class="w3-dropdown-hover w3-mobile">
+                <button type="submit" class="w3-button"> C <i class="fa fa-caret-down"></i></button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                    <a href="#" class="w3-bar-item w3-button">Color1</a>
-                    <a href="#" class="w3-bar-item w3-button">Color1</a>
-                    <a href="#" class="w3-bar-item w3-button">Color1</a>
+                    <a href="#" class="w3-bar-item w3-button w3-mobile">Color1</a>
+                    <a href="#" class="w3-bar-item w3-button w3-mobile">Color1</a>
+                    <a href="#" class="w3-bar-item w3-button w3-mobile">Color1</a>
                 </div>
             </div>
             <div class="circle-selector w3-dropdown-hover">
