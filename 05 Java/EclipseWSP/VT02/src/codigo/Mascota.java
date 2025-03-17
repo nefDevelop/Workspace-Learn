@@ -1,7 +1,7 @@
 package codigo;
 
 public class Mascota {
-	String nombre;
+	private String nombre;
 	int edad;
 	String color;
 	
