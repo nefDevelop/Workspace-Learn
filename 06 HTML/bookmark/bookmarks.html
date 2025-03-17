@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head lang="spa">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starpage - </title> <!--json titulo-->
+    <link rel="stylesheet" href="css/myStyles.css">
+    <link rel="stylesheet" href="css/w3css.css">
+    <script src="script_config.js" defer></script>
+</head>
+
+<body>
+    <div class="w3-bar w3-mobile">
+        <a href="#" class="w3-bar-item w3-button">Inicio</a>
+        <a href="#" class="w3-bar-item w3-button">Bookmark</a>
+        <a href="#" class="w3-bar-item w3-button">Test</a>
+        <a href="#" class="w3-bar-item w3-button">Search</a>
+        <a href="#" class="w3-bar-item w3-button w3-right">Go</a>
+        <input type="text" class="w3-bar-item w3-right " placeholder="Buscar...">
+    </div>
+
+    <!-- Contenedor principal -->
+    <h1>Bienvenido de nuevo, <a id="divName"></a></h1>
+
+    <div class="w3-mobile w3-row main_container">
+        <div id="mainlinks" class="w3-mobile w3-col s9 w3-dark-grey"></div>
+        <div class="w3-mobile w3-col s3">
+            <img class="w3-mobile w3-col" src="img/01.png" alt="background">
+        </div>
+    </div>
+
+
+    <div id="time" class="time"></div>
+
+    <div class="down_bar_container w3-display-bottommiddle w3-bar w3-mobile">
+        <div class="down_bar w3-display-bottommiddle w3-bar w3-mobile w3-gray"> <!--Barrra inferior-->
+            <a href="#" class="w3-bar-item w3-button w3-mobile">Inicio</a>
+            <a href="#" class="w3-bar-item w3-button w3-mobile">Bookmark</a>
+            <a href="#" class="w3-bar-item w3-button w3-mobile">Test</a>
+            <div class="w3-dropdown-hover w3-mobile">
+                <button type="submit" class="w3-button"> C <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="#" class="w3-bar-item w3-button w3-mobile">Color1</a>
+                    <a href="#" class="w3-bar-item w3-button w3-mobile">Color1</a>
+                    <a href="#" class="w3-bar-item w3-button w3-mobile">Color1</a>
+                </div>
+            </div>
+            <div class="circle-selector w3-dropdown-hover w3-right">
+                <button type="submit" class="w3-button"></button>
+                <div class="w3-dropdown-content w3-bar-block w3-right">
+                    <a href="#" class="dracula w3-bar-item w3-button"><div class="circle"></div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>

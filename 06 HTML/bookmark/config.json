@@ -1,0 +1,59 @@
+{
+  "links": {
+    "Externos": {
+      "Bandeja Gmail": "https://www.google.com",
+      "Github": "https://github.com"
+
+    },
+    "Sd": {
+      "Google": "https://www.google.com",
+      "Github": "https://github.com"
+
+    },
+    "host": {
+      "Archivo": "http://archivo.734038.xyz",
+      "Syncthing": "http://sync.734038.xyz",
+      "Biblioteca": "http://archivo.734038.xyz",
+      "Git": "http://git.734038.xyz",
+      "Album": "http://album.734038.xyz",
+      "Podcast": "http://podcast.734038.xyz",
+      "Musica": "http://loud.734038.xyz",
+      "Code": "http://code.734038.xyz",
+      "qbit": "http://qbit.734038.xyz",
+      "dav": "http://dav.734038.xyz",
+      "www": "http://www.734038.xyz"
+    },
+    "host2":{
+      "podder": "http://podder.734038.xyz",
+      "hoarder": "http://hoarder.734038.xyz",
+      "itt": "http://itt.734038.xyz",
+      "term": "http://term.734038.xyz",
+      "pdfstudy": "http://pdfstudy.734038.xyz",
+      "alist": "http://alist.734038.xyz",
+      "readeck": "http://readeck.734038.xyz",
+      "pdfedit": "http://pdfedit.734038.xyz",
+      "memo": "http://term.734038.xyz",
+      "lnkwarden": "http://lnkwarden.734038.xyz",
+      "md": "http://md.734038.xyz"
+    },
+    "local": {
+      "readerr": "http://192.168.30.30:8607",
+      "prowlarr": "http://192.168.30.30:8605",
+      "slskd": "http://192.168.30.30:8604",
+      "radarr": "http://192.168.30.30:8608",
+      "lidarr": "http://192.168.30.30:8603",
+      "jellyseer": "http://192.168.30.30:8606",
+      "penpot": "http://192.168.30.30:9001",
+      "gonic": "http://192.168.30.30:88106",
+      "jellyfin": "http://192.168.30.30:8105",
+      "jellyAMP": "http://192.168.30.30:8107/"
+    }
+  },
+  "settings": {
+    "theme": "dark",
+    "language": "es",
+    "columns": 3,
+    "name": "Nef734"
+  }
+  }
+  
