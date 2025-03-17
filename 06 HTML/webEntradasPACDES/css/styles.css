@@ -1,0 +1,72 @@
+/* Hoja de Estilos */
+
+body{
+    /* min-width: 440px; */
+    background-color: #93998c;
+    padding:19px;
+    max-width: 600px;
+    min-width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+b{ 
+    font-weight:bold;
+    color: #141414f5;
+}
+
+strong{
+    font-weight:bold;
+
+}
+
+/* Tabla */
+table{
+    margin:0px;
+
+}
+
+tr:nth-child(even){
+    background-color: #8c8484bb;
+}
+
+/* Imagen */
+.imgGroup {
+    display: flex;
+    border-radius: 16px 16px 0px 0px;
+    width:100%;
+}
+
+/* H */
+h1{
+    display:block;
+    text-align: center;
+    font-size: 40px;
+    font-family: sans;
+    color: #ffb641;
+}
+
+
+/* block */
+.block{
+    /* padding-bottom: 10px; */
+    /* border:1px solid #c6c1bdcd; */
+    border-radius:12px;
+}
+
+.pDescription{
+    position: relative;
+    z-index: 1;
+    margin:0px;
+    background-color:#dcd8d6;
+    padding: 25px 35px;
+    text-align:justify;
+    border-radius: 0px 0px 16px 16px;
+}
+
+.formContainer{
+    margin-top: -15px;
+    padding:35px;
+    background-color:#df927eaa;
+    border-radius: 0px 0px 16px 16px;
+}
