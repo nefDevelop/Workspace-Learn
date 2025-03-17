@@ -3,10 +3,16 @@
 
 :root {
   --bg-color: #2E3440;
-  --text-color: #D8DEE9;
+  --text-color: #a7a8aa;
   --card-bg: #3B4252;
 }
 
+img{
+  min-height: 500px;
+  max-height: 500px;
+  object-fit: cover; 
+  border-radius: 0px 12px 12px 0px;
+}
 
 #divName{
   color: rgb(43, 98, 227);
@@ -22,25 +28,36 @@
   bottom: 52px;
 }
 
+.main_container{
+  margin:8%;
+  border: 2px solid rgb(115, 115, 115);
+  border-radius:12px;
+}
 
 /* Create three equal columns that floats next to each other */
 #mainlinks {
   display: flex;
   flex-wrap: wrap; /* Para que las columnas se acomoden bien */
+  padding: 0px;
+  
 }
 
+.column{
+  padding:10px;
+}
 
-
-
+/* bookmakrs */
 .link-item {
+  display: flex;
+  flex-wrap: wrap; 
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color);
   font-weight: 100;
   margin-bottom: 5px;
 }
 
 .link-item:hover {
-  font-weight: bold;
+  color: #ffe2e2;
 }
 
 
@@ -63,17 +80,13 @@
 
 
 
-@media (min-width: 600px) {
-  .w3-row {
-      display: flex;
-      flex-direction: row-reverse; /* Imagen a la derecha en pantallas grandes */
+@media (max-width: 500px) {
+  .main_container{
+    margin:0px;
   }
-  .image-section {
-      height: auto;
-      width: 40%;
-  }
-  .text-section {
-      width: 60%;
+
+  img{
+    max-height:200px;
   }
 }
 
