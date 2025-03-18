@@ -13,7 +13,7 @@
         <!-- o Un título <h1> con el nombre del grupo musical. -->
         <h1>twenty øne piløts</h1>
         <!-- o Una imagen del grupo, la cual debe estar centrada y con bordes redondeados. -->
-        <div><img class="imgGroup" src="img/grupo.png"></div>
+        <div><img class="imgGroup" src="img/grupo.png" alt="Grupo Twenty One Pilots"></div>
 
     <!-- 2. Descripción del Grupo: -->
     <!-- o Un párrafo con información sobre el grupo. -->
@@ -25,7 +25,7 @@
         el baterista <strong>Josh Dun</strong>. El grupo es principalmente conocido por los sencillos
         <i>"Stressed Out"</i>, <i>"Ride"</i> y <i>"Heathens"</i>. El grupo recibió un
         Premio Grammy al mejor pop de dúo/grupo en los Premios Grammy de 2017. </p>
-        <!-- o Esta sección debe destacarse visualmente con un fondo de color claro. --> 
+        <!-- o Esta sección debe destacarse visualmente con un fondo de color claro. -->
     </div>
 
     <div class="formContainer">
@@ -38,10 +38,10 @@
         <div class="table_scroll">
             <table>
                 <tr>
-                    <th>Fecha</th>
-                    <th>Lugar</th>
-                    <th>Hora</th>
-                    <th>Precio</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Lugar</th>
+                    <th scope="col">Hora</th>
+                    <th scope="col">Precio</th>
                 </tr>
                 <tr>
                     <td>17 Abr, 2025</td>
@@ -77,7 +77,7 @@
             <!-- o Debe permitir al usuario seleccionar la fecha y 
              el lugar del concierto. -->
             <label>Fecha del concierto: </label>
-        
+
             <select name="concerts" id="concertDayPlace" required>
                 <option value="">Elige</option>
                 <optgroup label="17, Abril 2025">
@@ -93,36 +93,36 @@
                 <option value="24, Abril 2025 - LDLC Arena - Lyon, Francia">LDLC Arena - Lyon, (Francia)</option>
                 </optgroup>
               </select><br>
-            
+
 
             <!-- o Debe incluir opciones para elegir la cantidad de entradas y la categoría. -->
             <label>Entradas: <input type="number" id="cantidad" name="nEntradas" min="1" value="" required></label>
-            
+
             <!-- o Los métodos de pago deben mostrarse como botones de 
              opción (radio). -->
              <div class="payContainer">
                 <label>Metodos de pago:</label>
-                <label> 
+                <label>
                     <input type="radio" value="bizum" name="metodoPago">
-                    <img class="imgPagos" src="img/bizum.png">
+                    <img class="imgPagos" src="img/bizum.png" alt="bizum">
                 </label>
                 <label>
                     <input type="radio" value="paypal" name="metodoPago">
-                    <img class="imgPagos" src="img/paypal.png">
+                    <img class="imgPagos" src="img/paypal.png" alt="paypal">
                 </label>
                 <label>
                     <input type="radio" value="mastercard" name="metodoPago">
-                    <img class="imgPagos" src="img/master.png">
+                    <img class="imgPagos" src="img/master.png" alt="mastercard">
                 </label>
                 <label>
                     <input type="radio" value="visa" name="metodoPago">
-                    <img class="imgPagos" src="img/visa.png">
+                    <img class="imgPagos" src="img/visa.png" alt="visa">
                 </label>
             </div>
 
             <!-- o Un checkbox obligatorio para aceptar los términos y condiciones. -->
-            <label id="agreeTerms"><input type="checkbox" required></input>Acepta los <a href="https://es.wikipedia.org/wiki/Proyecto_GNU">términos</a> uso.</label>
-            
+            <label id="agreeTerms"><input type="checkbox" required>Acepta los <a href="https://es.wikipedia.org/wiki/Proyecto_GNU">términos</a> uso.</label>
+
             <!-- 5. Botón de Confirmación:
             o Estilizado con color de fondo azul y texto blanco.
             o Al pasar el mouse sobre él, debe cambiar ligeramente de color.
