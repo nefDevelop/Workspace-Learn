@@ -9,15 +9,14 @@
 
 <body>
     <!-- 1. Encabezado: -->
-    <!-- o Un título <h1> con el nombre del grupo musical. -->
-    <!-- o Una imagen del grupo, la cual debe estar centrada y con bordes redondeados. -->
     <div class="block">
-    <h1>twenty øne piløts</h1>
-    <div><img class="imgGroup" src="img/grupo.png"></div>
+        <!-- o Un título <h1> con el nombre del grupo musical. -->
+        <h1>twenty øne piløts</h1>
+        <!-- o Una imagen del grupo, la cual debe estar centrada y con bordes redondeados. -->
+        <div><img class="imgGroup" src="img/grupo.png"></div>
 
-    <!-- 2. Descripción del Grupo:
-    o Un párrafo con información sobre el grupo.
-    o Esta sección debe destacarse visualmente con un fondo de color claro. -->
+    <!-- 2. Descripción del Grupo: -->
+    <!-- o Un párrafo con información sobre el grupo. -->
     <p class="pDescription"><strong>Twenty One Pilots</strong> (estilizado en minúsculas como
         twenty øne piløts) es un dúo musical estadounidense de Columbus, Ohio.
         La banda se formó en 2009 por el vocalista <b>Tyler Joseph</b> junto con <b>Nick Thomas</b>
@@ -26,6 +25,7 @@
         el baterista <strong>Josh Dun</strong>. El grupo es principalmente conocido por los sencillos
         <i>"Stressed Out"</i>, <i>"Ride"</i> y <i>"Heathens"</i>. El grupo recibió un
         Premio Grammy al mejor pop de dúo/grupo en los Premios Grammy de 2017. </p>
+        <!-- o Esta sección debe destacarse visualmente con un fondo de color claro. --> 
     </div>
 
     <div class="formContainer">
@@ -72,23 +72,56 @@
     </fieldset>
 
     <fieldset><legend>Formulario de compra</legend>
-        <form>
-            <input type="date" requerid></input>
-            <input type="checkbox" requerid></input>
+        <form action="confirmacion.html">
+            <!-- 4. Formulario de Compra:-->
+            <!-- o Debe permitir al usuario seleccionar la fecha y 
+             el lugar del concierto. -->
+            <label>Fecha del concierto: </label>
+        
+            <select name="concerts" id="concertDayPlace" required>
+                <option value="">Elige</option>
+                <optgroup label="17, Abril 2025">
+                  <option value="17, Abril 2025 - Unipol Arena - Bologna, Italia">Unipol Arena, Bologna (Italia)</option>
+                </optgroup>
+                <optgroup label="21, Abril 2025">
+                <option value="21, Abril 2025 - Movistar Arena - Madrid, España">Movistar Arena - Madrid, (España)</option>
+                </optgroup>
+                <optgroup label="22, Abril 2025">
+                <option value="22, Abril 2025 - Palau San Jordi - Barcelona, España">Palau San Jordi - Barcelona, (España)</option>
+                </optgroup>
+                <optgroup label="24, Abril 2025">
+                <option value="24, Abril 2025 - LDLC Arena - Lyon, Francia">LDLC Arena - Lyon, (Francia)</option>
+                </optgroup>
+              </select><br>
             
-            <input type="number" id="cantidad" name="nEntradas" min="1" value="1" required>
-            <select id="concert" name="concert">
-                <option value="17-04-25"></option>
 
-            </select>
+            <!-- o Debe incluir opciones para elegir la cantidad de entradas y la categoría. -->
+            <label>Entradas: <input type="number" id="cantidad" name="nEntradas" min="1" value="" required></label>
             
-            <!-- 4. Formulario de Compra:
-            o Debe permitir al usuario seleccionar la fecha y el lugar del concierto.
-            o Debe incluir opciones para elegir la cantidad de entradas y la categoría.
-            o Los métodos de pago deben mostrarse como botones de opción (radio).
-            o Un checkbox obligatorio para aceptar los términos y condiciones. -->
-            
-            
+            <!-- o Los métodos de pago deben mostrarse como botones de 
+             opción (radio). -->
+             <div class="payContainer">
+                <label>Metodos de pago:</label>
+                <label> 
+                    <input type="radio" value="bizum" name="metodoPago">
+                    <img class="imgPagos" src="img/bizum.png">
+                </label>
+                <label>
+                    <input type="radio" value="paypal" name="metodoPago">
+                    <img class="imgPagos" src="img/paypal.png">
+                </label>
+                <label>
+                    <input type="radio" value="mastercard" name="metodoPago">
+                    <img class="imgPagos" src="img/master.png">
+                </label>
+                <label>
+                    <input type="radio" value="visa" name="metodoPago">
+                    <img class="imgPagos" src="img/visa.png">
+                </label>
+            </div>
+
+            <!-- o Un checkbox obligatorio para aceptar los términos y condiciones. -->
+            <label id="agreeTerms"><input type="checkbox" required></input>Acepta los <a href="https://es.wikipedia.org/wiki/Proyecto_GNU">términos</a> uso.</label>
             
             <!-- 5. Botón de Confirmación:
             o Estilizado con color de fondo azul y texto blanco.

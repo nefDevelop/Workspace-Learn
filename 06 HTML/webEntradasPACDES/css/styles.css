@@ -4,16 +4,15 @@ body{
     /* min-width: 440px; */
     background-color: #93998c;
     color: #23232d;
-    padding:19px;
-    max-width: 600px;
-    min-width: 270px;
+    padding:29px;
+    max-width: 700px;
+    min-width: 440px;
     margin-left: auto;
     margin-right: auto;
 }
 
 /* H */
 h1{
-    display:block;
     text-align: center;
     font-size: 2.5em;
     font-family: sans;
@@ -28,8 +27,6 @@ h1{
     width:100%;
 }
 
-
-
 b{ 
     font-weight:bold;
     color: #141414f5;
@@ -42,20 +39,23 @@ strong{
 
 fieldset{
     display:block;
-    margin-top: 10px;
-    border: 3px solid #23232d;
+    width:100%;
+    margin-bottom: 20px;
+    border: 3px solid #dcd8d6;
     border-radius: 12px;
-    overflow: hidden;
-
+    padding: 15px 0px 0px 0px;
+    
 }
+
 
 legend{
     font-size: 1em;
     font-weight: bold;
-    color:#23232d;
+    color:#dcd8d6;
     font-family: Helvetica, Arial, sans-serif;
     border-radius: 15px;
     padding: 0 14px;
+    white-space: nowrap;
 }
 
 
@@ -63,43 +63,61 @@ legend{
 table{
     border-collapse: collapse;
     width:100%;
-    table-layout: auto;
+    margin-bottom:15px;
 }
 
 th{
     font-family: Helvetica, Arial, sans-serif;
     padding: 10px 0px;
     background-color: #7c8176;
-    color:#23232d;
+    color:#dcd8d6;
 }
 
 td{
-    padding: 8px 0px;
-    font-size: 14px;
+    padding: 13px 3px;
+    font-size: 15px;
     text-align: center;
-    white-space: wrap;
+    white-space: normal;
+    color: #dcd8d6;
 }
 
 tr:nth-child(even){
     background-color: #c8bbbb45;
 }
 
-tr:hover{
-    background-color: #868181a7;
-}
-tr{border-bottom: 1px solid #5d6158;}
-
-.table_scroll{
-    overflow-x: auto; /* Agrega desplazamiento horizontal si es necesario */
-    max-width: 100%;
+tr:hover td{
+    background-color: #868181;
+    color: #23232d;
 }
 
-/* block */
-.block{
-    /* padding-bottom: 10px; */
-    /* border:1px solid #c6c1bdcd; */
-    border-radius:12px;
+tr{
+    border-bottom: 1px solid #5d6158;
 }
+
+form{
+    padding:10px;
+}
+
+label{
+    display:inline;
+    width:100%;
+    font-family: Arial;
+    font-size: 1.1em;
+    color: #23232d;
+    margin-top: 10px;
+    padding: 0px 0px 0px 0px;
+}
+
+.submit, #cantidad, select{
+    position:relative;
+    padding:10px;
+    margin-top: 3px;
+    border:2px solid #5d6158d3;
+    color: #5d6158;
+    background-color: #dcd8d6;
+    border-radius: 11px;
+}
+
 
 .pDescription{
     position: relative;
@@ -110,17 +128,16 @@ tr{border-bottom: 1px solid #5d6158;}
     text-align:justify;
     border-radius: 0px 0px 16px 16px;
     box-shadow: 4px 0 7px 0 #00000012, -4px 0 7px 0#00000012;
-
 }
 
 .formContainer{
+
     margin-top: -15px;
-    padding:35px;
+    padding:35px 35px 5px 25px;
     background-color:#7c8176;
     border-radius: 0px 0px 16px 16px;
     box-shadow: 0 4px 8px 0 #00000012, 0 6px 20px 0 #00000012;
 }
-
 
 .button-center{
     text-align: center;
@@ -140,4 +157,29 @@ tr{border-bottom: 1px solid #5d6158;}
     border: 2px solid #3c3cbb;
     background-color: #3c3cbb;
     color:white;
+}
+
+/* Zona de pagos */
+
+.payContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.payContainer label {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+.imgPagos
+{
+    width: 50px;
+    height: auto;
+}
+
+#agreeTerms{
+    display:block;
+    text-align: center;
 }
