@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Head -->
 <head lang="spa">
     <title>Entradas de Twenty One Pilots</title>
     <meta charset="UTF-8">
@@ -7,13 +8,13 @@
     <script src="js/script.js"></script>
 </head>
 
+<!-- Body -->
 <body>
     <!-- 1. Encabezado: -->
-    <div class="block">
-        <!-- o Un título <h1> con el nombre del grupo musical. -->
-        <h1>twenty øne piløts</h1>
-        <!-- o Una imagen del grupo, la cual debe estar centrada y con bordes redondeados. -->
-        <div><img class="imgGroup" src="img/grupo.png" alt="Grupo Twenty One Pilots"></div>
+    <!-- o Un título <h1> con el nombre del grupo musical. -->
+    <h1>twenty øne piløts</h1>
+    <!-- o Una imagen del grupo, la cual debe estar centrada y con bordes redondeados. -->
+    <div><img class="imgGroup" src="img/grupo.png" alt="Grupo Twenty One Pilots"></div>
 
     <!-- 2. Descripción del Grupo: -->
     <!-- o Un párrafo con información sobre el grupo. -->
@@ -26,23 +27,25 @@
         <i>"Stressed Out"</i>, <i>"Ride"</i> y <i>"Heathens"</i>. El grupo recibió un
         Premio Grammy al mejor pop de dúo/grupo en los Premios Grammy de 2017. </p>
         <!-- o Esta sección debe destacarse visualmente con un fondo de color claro. -->
-    </div>
+
 
     <div class="formContainer">
     <!-- 3. Tabla con Fechas de Conciertos:
     o Debe incluir al menos tres fechas de conciertos con información sobre el lugar, la hora y
     el precio.
     o Las filas de la tabla deben alternar colores para facilitar la lectura. -->
-    <fieldset>
-        <legend>Proximas fechas:</legend>
-        <div class="table_scroll">
+        <h2>Proximas conciertos:</h2>
+        <div>
             <table>
+                <thead>
                 <tr>
                     <th scope="col">Fecha</th>
                     <th scope="col">Lugar</th>
                     <th scope="col">Hora</th>
                     <th scope="col">Precio</th>
                 </tr>
+                </thead>
+                <tbody>
                 <tr>
                     <td>17 Abr, 2025</td>
                     <td>Unipol Arena - Bologna, IT</td>
@@ -67,41 +70,47 @@
                     <td>20:00</td>
                     <td>65 €</td>
                 </tr>
+                </tbody>
             </table>
         </div>
-    </fieldset>
-
-    <fieldset><legend>Formulario de compra</legend>
-        <form action="confirmacion.html">
+    <h2>Formulario de compra</h2>
+        <form action="confirmacion.html" class="form">
             <!-- 4. Formulario de Compra:-->
             <!-- o Debe permitir al usuario seleccionar la fecha y 
              el lugar del concierto. -->
-            <label>Fecha del concierto: </label>
+            <h3>Datos Personales:</h3>
+            <input type="text" id="name" required placeholder="Nombre completo">
+            <br>
 
+            <h3>Detalles del evento:</h3>
+            <input type="date" id="date" required>
+
+            <h3>Lugar del concierto:</h3>
             <select name="concerts" id="concertDayPlace" required>
                 <option value="">Elige</option>
-                <optgroup label="17, Abril 2025">
-                  <option value="17, Abril 2025 - Unipol Arena - Bologna, Italia">Unipol Arena, Bologna (Italia)</option>
+                <option value="Unipol Arena - Bologna, Italia">Unipol Arena, Bologna (Italia)</option>
+                <option value="Movistar Arena - Madrid, España">Movistar Arena - Madrid, (España)</option>
+                <option value="Palau San Jordi - Barcelona, España">Palau San Jordi - Barcelona, (España)</option>
+                <option value="LDLC Arena - Lyon, Francia">LDLC Arena - Lyon, (Francia)</option>
                 </optgroup>
-                <optgroup label="21, Abril 2025">
-                <option value="21, Abril 2025 - Movistar Arena - Madrid, España">Movistar Arena - Madrid, (España)</option>
-                </optgroup>
-                <optgroup label="22, Abril 2025">
-                <option value="22, Abril 2025 - Palau San Jordi - Barcelona, España">Palau San Jordi - Barcelona, (España)</option>
-                </optgroup>
-                <optgroup label="24, Abril 2025">
-                <option value="24, Abril 2025 - LDLC Arena - Lyon, Francia">LDLC Arena - Lyon, (Francia)</option>
-                </optgroup>
-              </select><br>
+            </select>
+            
+            <!-- Categoria de la entrada -->
+            <h3>Categoría</h3>
+            <select name="categoria" id="ticketCategoria" required>
+                <option value="General">General</option>
+                <option value="Premium">Premium</option>
+            </select>
 
-
+            <h3>Número de entradas</h3>
             <!-- o Debe incluir opciones para elegir la cantidad de entradas y la categoría. -->
-            <label>Entradas: <input type="number" id="cantidad" name="nEntradas" min="1" value="" required></label>
+            <input type="number" id="cantidad" name="nEntradas" min="1" value="" required>
+
 
             <!-- o Los métodos de pago deben mostrarse como botones de 
              opción (radio). -->
-             <div class="payContainer">
-                <label>Metodos de pago:</label>
+            <h3>Metodos de pago:</h3>
+            <div class="payContainer">
                 <label>
                     <input type="radio" value="bizum" name="metodoPago">
                     <img class="imgPagos" src="img/bizum.png" alt="bizum">
@@ -121,7 +130,7 @@
             </div>
 
             <!-- o Un checkbox obligatorio para aceptar los términos y condiciones. -->
-            <label id="agreeTerms"><input type="checkbox" required>Acepta los <a href="https://es.wikipedia.org/wiki/Proyecto_GNU">términos</a> uso.</label>
+            <div id="agreeTerms"><input type="checkbox" required>Acepta los <a href="https://es.wikipedia.org/wiki/Proyecto_GNU">términos</a> uso.</div>
 
             <!-- 5. Botón de Confirmación:
             o Estilizado con color de fondo azul y texto blanco.
@@ -131,4 +140,5 @@
         </form>
     </fieldset>
     </div>
+    <footer>Hey</footer>
 </body>
