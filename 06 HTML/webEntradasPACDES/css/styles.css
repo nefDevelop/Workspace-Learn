@@ -51,8 +51,13 @@ h3{
     width: 400px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 3px 7px 3px #00000012, 0 -3px 7px 3px #00000012;
+    box-shadow: 4px 0 7px 0 #00000012, -4px 0 7px 0#00000012;
     display: flex;
+}
+
+.imgContainer{
+    min-width: 400px;
+    padding: 0px 25px;
 }
 
 b{ 
@@ -131,26 +136,29 @@ input[type=text]::placeholder {
 .pDescription{
     z-index: 1;
     min-width: 400px;
+    max-width: 800px;
     margin: 20px 0px;
-    padding: 25px 35px;
+    padding: 30px 25px;
     background-color:#dcd8d6;
     text-align:justify;
     border-radius: 16px 16px 0px 0px;
     box-shadow: 4px 0 7px 0 #00000012, -4px 0 7px 0#00000012;
-}
-
-
-.formContainer{
-    display:block;
     margin-left: auto;
     margin-right: auto;
+
+}
+
+.formContainer{
     min-width: 400px;
+    max-width: 800px;
     margin: 20px 0px;
     margin-top: -20px;
     padding:10px 25px;
     background-color:#7c8176;
     border-radius: 0px 0px 16px 16px;
-    box-shadow: 0 4px 8px 0 #00000012, 0 6px 20px 0 #00000012;
+    box-shadow: 4px 0 7px 0 #00000012, -4px 0 7px 0#00000012;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .button-center{
@@ -195,6 +203,7 @@ input[type=text]::placeholder {
 }
 
 #agreeTerms{
-    display:block;
-    text-align: center;
+    margin: 0 ;
+    padding-top: 25px;
+    font-size: 1.1em;
 }

@@ -14,7 +14,7 @@
     <!-- o Un título <h1> con el nombre del grupo musical. -->
     <h1>twenty øne piløts</h1>
     <!-- o Una imagen del grupo, la cual debe estar centrada y con bordes redondeados. -->
-    <div><img class="imgGroup" src="img/grupo.png" alt="Grupo Twenty One Pilots"></div>
+    <div class="imgContainer"><img class="imgGroup" src="img/grupo.png" alt="Grupo Twenty One Pilots"></div>
 
     <!-- 2. Descripción del Grupo: -->
     <!-- o Un párrafo con información sobre el grupo. -->
@@ -92,9 +92,8 @@
                 <option value="Movistar Arena - Madrid, España">Movistar Arena - Madrid, (España)</option>
                 <option value="Palau San Jordi - Barcelona, España">Palau San Jordi - Barcelona, (España)</option>
                 <option value="LDLC Arena - Lyon, Francia">LDLC Arena - Lyon, (Francia)</option>
-                </optgroup>
             </select>
-            
+
             <!-- Categoria de la entrada -->
             <h3>Categoría</h3>
             <select name="categoria" id="ticketCategoria" required>
@@ -130,7 +129,7 @@
             </div>
 
             <!-- o Un checkbox obligatorio para aceptar los términos y condiciones. -->
-            <div id="agreeTerms"><input type="checkbox" required>Acepta los <a href="https://es.wikipedia.org/wiki/Proyecto_GNU">términos</a> uso.</div>
+            <div id="agreeTerms"><input type="checkbox" required>Acepta las condiciones.</div>
 
             <!-- 5. Botón de Confirmación:
             o Estilizado con color de fondo azul y texto blanco.
@@ -138,7 +137,6 @@
             o Debe enviar los datos a la página de confirmación mediante JavaScript -->
             <div class="button-center"><button id="submit" type="submit" value="submit">Comprar Entrada</button></div>
         </form>
-    </fieldset>
     </div>
     <footer>Hey</footer>
 </body>
