@@ -38,38 +38,38 @@
         <div>
             <table>
                 <thead>
-                <tr>
-                    <th scope="col">Fecha</th>
-                    <th scope="col">Lugar</th>
-                    <th scope="col">Hora</th>
-                    <th scope="col">Precio</th>
-                </tr>
+                    <tr>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Lugar</th>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Precio</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>17 Abr, 2025</td>
-                    <td>Unipol Arena - Bologna, IT</td>
-                    <td>22:00</td>
-                    <td>60 €</td>
-                </tr>
-                <tr>
-                    <td>21 Abr, 2025</td>
-                    <td>Movistar Arena - Madrid, ES</td>
-                    <td>20:00</td>
-                    <td>65 €</td>
-                </tr>
-                <tr>
-                    <td>22 Abr, 2025</td>
-                    <td>Palau San Jordi - Barcelona, ES</td>
-                    <td>20:00</td>
-                    <td>65 €</td>
-                </tr>
-                <tr>
-                    <td>24 Abr, 2025</td>
-                    <td>LDLC Arena - Lyon, FR</td>
-                    <td>20:00</td>
-                    <td>65 €</td>
-                </tr>
+                    <tr>
+                        <td>17 Abr, 2025</td>
+                        <td>Unipol Arena - Bologna, IT</td>
+                        <td>22:00</td>
+                        <td>60 €</td>
+                    </tr>
+                    <tr>
+                        <td>21 Abr, 2025</td>
+                        <td>Movistar Arena - Madrid, ES</td>
+                        <td>20:00</td>
+                        <td>65 €</td>
+                    </tr>
+                    <tr>
+                        <td>22 Abr, 2025</td>
+                        <td>Palau San Jordi - Barcelona, ES</td>
+                        <td>20:00</td>
+                        <td>65 €</td>
+                    </tr>
+                    <tr>
+                        <td>24 Abr, 2025</td>
+                        <td>LDLC Arena - Lyon, FR</td>
+                        <td>20:00</td>
+                        <td>65 €</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -78,14 +78,13 @@
             <!-- 4. Formulario de Compra:-->
             <!-- o Debe permitir al usuario seleccionar la fecha y 
              el lugar del concierto. -->
-            <h3>Datos Personales:</h3>
-            <input type="text" id="name" required placeholder="Nombre completo">
+            <label >Datos Personales:</label><input type="text" id="name" required placeholder="Nombre completo">
             <br>
 
-            <h3>Detalles del evento:</h3>
+            <label>Detalles del evento:</label>
             <input type="date" id="date" required>
 
-            <h3>Lugar del concierto:</h3>
+            <label>Lugar del concierto:</label>
             <select name="concerts" id="concertDayPlace" required>
                 <option value="">Elige</option>
                 <option value="Unipol Arena - Bologna, Italia">Unipol Arena, Bologna (Italia)</option>
@@ -95,20 +94,20 @@
             </select>
 
             <!-- Categoria de la entrada -->
-            <h3>Categoría</h3>
+            <label>Categoría</label>
             <select name="categoria" id="ticketCategoria" required>
                 <option value="General">General</option>
                 <option value="Premium">Premium</option>
             </select>
 
-            <h3>Número de entradas</h3>
+            <label>Número de entradas</label>
             <!-- o Debe incluir opciones para elegir la cantidad de entradas y la categoría. -->
             <input type="number" id="cantidad" name="nEntradas" min="1" value="" required>
 
 
             <!-- o Los métodos de pago deben mostrarse como botones de 
              opción (radio). -->
-            <h3>Metodos de pago:</h3>
+            <label>Metodos de pago:</label>
             <div class="payContainer">
                 <label>
                     <input type="radio" value="bizum" name="metodoPago">
@@ -135,8 +134,8 @@
             o Estilizado con color de fondo azul y texto blanco.
             o Al pasar el mouse sobre él, debe cambiar ligeramente de color.
             o Debe enviar los datos a la página de confirmación mediante JavaScript -->
-            <div class="button-center"><button id="submit" type="submit" value="submit">Comprar Entrada</button></div>
+            <div class="button-center"><input id="submit" type="submit" value="Comprar entrada"></input></div>
         </form>
     </div>
-    <footer>Hey</footer>
+    <footer>🎧 Made by: Neftalí Domínguez Urda. 🎧 <br>For DAW - Lenguaje de Marcas</footer>
 </body>

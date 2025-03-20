@@ -1,25 +1,26 @@
 /* Hoja de Estilos */
-
 html{
-    line-height: 1.5em;
-    font-family: Calibri;
+    padding: 30px;
     margin-left: auto;
     margin-right: auto;
-    padding:10px 0px;
-    margin: 10px;
+    line-height: 1.6em;
 }
 
 body{
+    font-family: Calibri;
     background-color: #93998c;
     color: #23232d;
 }
 
+/* Posicion absoluta para que se extienda de lado a lado  */
 footer{
-    display:flex;
-    width: 100%;
-    height: 80px;
-    background-color: black;
-    margin-block-start: 3em;
+    position: absolute;
+    left: 0px;
+    width:100vw;
+    height: 90px;
+    background-color: #23232d;
+    padding: 30px 0px;
+    color: #93998c;
     text-align: center;
 }
 
@@ -60,17 +61,17 @@ h3{
     padding: 0px 25px;
 }
 
+/* Uso b y strong para diferenciar un poco */
 b{ 
     font-weight:bold;
-    color: #141414f5;
+    color: #141414b8;
 }
 
 strong{
     font-weight:bold;
-
 }
 
-/* Tabla */
+/* Tabla  --  Aqui editamos todos los componentes de respecto a la tabla*/
 table{
     margin:0px;
     padding:0px;
@@ -79,6 +80,7 @@ table{
     border: 1px solid #5d6158;
 }
 
+/* Header de la tabla */
 th{
     font-family: Helvetica, Arial, sans-serif;
     padding: 10px 0px;
@@ -86,6 +88,7 @@ th{
     color:#dcd8d6;
 }
 
+/* Filas */
 td{
     padding: 13px 3px;
     font-size: 15px;
@@ -94,21 +97,32 @@ td{
     color: #dcd8d6;
 }
 
-tr:nth-child(even){
+/* Cada fila, empezando en impar, cambia de color alternando */
+tr:nth-child(odd){
     background-color: #c8bbbb45;
 }
 
+/* Toda fila de TD cambia de color al pasar el raton por encima */
 tr:hover td{
     background-color: #868181;
     color: #23232d;
 }
 
+/* Dibujamos una linea horizontal entre las filas */
 tr{
     border-bottom: 1px solid #5d6158;
 }
 
+/* espacio interior al formulario */
 form{
     padding:0px 10px 5px 10px;
+}
+
+/* Como se aconsejaba usar label, pues le doy el formato de un h2 */
+label{
+    display: block;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 input[type=number],input[type=text],input[type=date] , select{
