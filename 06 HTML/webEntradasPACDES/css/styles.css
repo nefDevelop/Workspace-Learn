@@ -3,6 +3,8 @@
 *{
    --text-color: #23232d; 
    --border-color: #5d6158d3;
+   --border-radius: 12px;
+   --spacing: 12px;
 }
 
 html{
@@ -23,7 +25,7 @@ footer{
     position: absolute;
     left: 0px;
     width:100vw;
-    height: 90px;
+    height: 50px;
     background-color: #23232d;
     padding: 30px 0px;
     color: #93998c;
@@ -39,26 +41,27 @@ h1{
 }
 
 h2{
-    font-size: 1,2em;
+    font-size: 1.2em;
     font-family: Verdana;
     color: #dcd8d6; 
-    margin: 20px 0px 20px 0px; 
+    margin: 15px 0px 0px 0px; 
 }
 
 
 /* Imagen */
 .imgGroup {
-    border-radius: 16px;
+    display: flex;
+    border-radius: var(--border-radius);
     width: 400px;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 4px 0 7px 0 #00000012, -4px 0 7px 0#00000012;
-    display: flex;
 }
 
 .imgContainer{
     min-width: 400px;
-    padding: 0px 25px;
+    /* Mantenemos centrada la imagen con el padding */
+    padding: 0px 25px; 
 }
 
 /* Uso b y strong para diferenciar un poco */
@@ -72,29 +75,43 @@ strong{
 }
 
 /* Tabla  --  Aqui editamos todos los componentes de respecto a la tabla*/
-table{
-    margin:0px;
-    padding:0px;
-    border-collapse: collapse;
-    width:100%;
-    border: 1px solid #5d6158;
+.container-table{
+    margin: var(--spacing);
 }
 
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: var(--border-radius); 
+    border: 1px solid #5d6158;
+    width:100%;
+}
+
+
 /* Header de la tabla */
-th{
+th {
     font-family: Helvetica, Arial, sans-serif;
     padding: 10px 0px;
-    background-color: #3b4231;
+    background-color: #3b4231be;
     color:#dcd8d6;
 }
 
+/* Redondear esquinas - Ayuda IA*/
+tr:first-child th:first-child { border-top-left-radius: var(--border-radius); }
+tr:first-child th:last-child { border-top-right-radius: var(--border-radius); }
+tr:last-child td:first-child { border-bottom-left-radius: var(--border-radius); }
+tr:last-child td:last-child { border-bottom-right-radius: var(--border-radius);; }
+
+
 /* Filas */
 td{
-    padding: 13px 3px;
     font-size: 15px;
     text-align: center;
     white-space: normal;
     color: #dcd8d6;
+    padding: 10px;
+    text-align: center;
 }
 
 /* Cada fila, empezando en impar, cambia de color alternando */
@@ -109,7 +126,7 @@ tr:hover td{
 }
 
 /* Dibujamos una linea horizontal entre las filas */
-tr{
+td {
     border-bottom: 1px solid #5d6158;
 }
 
@@ -119,7 +136,7 @@ form{
 }
 
 fieldset{
-    border-radius: 6px;
+    border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
 }
 
@@ -136,13 +153,14 @@ label{
     font-size: 1em;
 }
 
+
 input[type=number],input[type=text],input[type=date] , select{
     width:100% ;
-    padding:10px;
+    padding:var(--spacing);
     border:1px solid #5d6158d3;
     color: #dcd8d6;
     background-color: #7c8176;
-    border-radius: 6px;
+    border-radius: var(--border-radius);
     box-sizing: border-box;
 }
 
@@ -176,9 +194,9 @@ input[type=text]::placeholder {
 .formContainer{
     min-width: 400px;
     max-width: 800px;
-    margin: 20px 0px;
+    margin: var(--spacing) 0;
     margin-top: -20px;
-    padding:10px 25px;
+    padding: var(--spacing) 25px;
     background-color:#7c8176;
     border-radius: 0px 0px 16px 16px;
     box-shadow: 4px 0 7px 0 #00000012, -4px 0 7px 0#00000012;
@@ -194,7 +212,7 @@ input[type=text]::placeholder {
     margin:5px 0;
     padding:3px 1em;
     font-weight: bold;
-    border-radius:13px;
+    border-radius: var(--border-radius);
     border: 2px solid blue;
     background-color: blue;
     color:white;
@@ -211,9 +229,8 @@ input[type=text]::placeholder {
 .payContainer {
     display: flex;
     flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 15px;
+    gap: var(--spacing);
+    justify-content: center;
 
 }
 

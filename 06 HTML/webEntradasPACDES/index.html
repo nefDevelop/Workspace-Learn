@@ -34,8 +34,8 @@
     o Debe incluir al menos tres fechas de conciertos con información sobre el lugar, la hora y
     el precio.
     o Las filas de la tabla deben alternar colores para facilitar la lectura. -->
-        <h2>Proximas conciertos:</h2>
-        <div>
+    <h2>Proximas conciertos:</h2>
+        <div class="container-table">
             <table>
                 <thead>
                     <tr>
@@ -79,9 +79,9 @@
             <!-- o Debe permitir al usuario seleccionar la fecha y 
              el lugar del concierto. -->
             <fieldset> <legend>Informacion Personal</legend>
-                <label for="name">Nombre:</label><input type="text" id="name" required placeholder="Nombre completo">
-                <label for="surname">Apellidos:</label><input type="text" id="surname" required placeholder="Nombre completo">
-                <label for="id_number">DNI:</label><input type="text" id="id_number" required placeholder="Nombre completo">
+                <label for="name">Nombre:</label><input type="text" id="name" required placeholder="Nombre">
+                <label for="surname">Apellidos:</label><input type="text" id="surname" required placeholder="Apellidos">
+                <label for="id_number">DNI:</label><input type="text" id="id_number" required placeholder="Numero de DOI">
             </fieldset>
             <br>
 
@@ -91,7 +91,7 @@
 
             <label>Lugar del concierto:</label>
             <select name="concerts" id="concertDayPlace" required>
-                <option value="">Elige</option>
+                <option value="">Elige lugar</option>
                 <option value="Unipol Arena - Bologna, Italia">Unipol Arena, Bologna (Italia)</option>
                 <option value="Movistar Arena - Madrid, España">Movistar Arena - Madrid, (España)</option>
                 <option value="Palau San Jordi - Barcelona, España">Palau San Jordi - Barcelona, (España)</option>
@@ -107,7 +107,7 @@
 
             <label>Número de entradas</label>
             <!-- o Debe incluir opciones para elegir la cantidad de entradas y la categoría. -->
-            <input type="number" id="cantidad" name="nEntradas" min="1" value="" required>
+            <input type="number" id="cantidad" name="nEntradas" min="1" value="" palceholder="" required>
             </fieldset>
 
             <fieldset> <legend>Metodos de pago</legend>

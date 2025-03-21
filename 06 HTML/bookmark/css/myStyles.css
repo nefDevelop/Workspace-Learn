@@ -24,7 +24,7 @@ body{
 
 .time {
   display:block;
-	color: --;
+	color: var(--text-color);
 	font-family: monospace;
 	font-size:15px;
   left: 35px;
@@ -48,7 +48,7 @@ body{
   flex: 3;
   flex-wrap: wrap; /* Para que los enlaces se ajusten automáticamente */
   justify-content: center; /* Centra los enlaces */
-  align-items: top;
+  align-items:center ;
   padding: 20px 10px;
   background-color: var(--card-bg);
   color: var(--text-color);
