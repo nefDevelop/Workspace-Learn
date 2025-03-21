@@ -78,9 +78,14 @@
             <!-- 4. Formulario de Compra:-->
             <!-- o Debe permitir al usuario seleccionar la fecha y 
              el lugar del concierto. -->
-            <label >Datos Personales:</label><input type="text" id="name" required placeholder="Nombre completo">
+            <fieldset> <legend>Informacion Personal</legend>
+                <label for="name">Nombre:</label><input type="text" id="name" required placeholder="Nombre completo">
+                <label for="surname">Apellidos:</label><input type="text" id="surname" required placeholder="Nombre completo">
+                <label for="id_number">DNI:</label><input type="text" id="id_number" required placeholder="Nombre completo">
+            </fieldset>
             <br>
 
+            <fieldset> <legend> Detalles del evento</legend>
             <label>Detalles del evento:</label>
             <input type="date" id="date" required>
 
@@ -103,11 +108,12 @@
             <label>Número de entradas</label>
             <!-- o Debe incluir opciones para elegir la cantidad de entradas y la categoría. -->
             <input type="number" id="cantidad" name="nEntradas" min="1" value="" required>
+            </fieldset>
 
-
+            <fieldset> <legend>Metodos de pago</legend>
             <!-- o Los métodos de pago deben mostrarse como botones de 
              opción (radio). -->
-            <label>Metodos de pago:</label>
+            <label for="payment">Elige un método:</label>
             <div class="payContainer">
                 <label>
                     <input type="radio" value="bizum" name="metodoPago">
@@ -126,7 +132,7 @@
                     <img class="imgPagos" src="img/visa.png" alt="visa">
                 </label>
             </div>
-
+        </fieldset>
             <!-- o Un checkbox obligatorio para aceptar los términos y condiciones. -->
             <div id="agreeTerms"><input type="checkbox" required>Acepta las condiciones.</div>
 

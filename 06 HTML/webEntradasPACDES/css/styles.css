@@ -1,4 +1,10 @@
 /* Hoja de Estilos */
+
+*{
+   --text-color: #23232d; 
+   --border-color: #5d6158d3;
+}
+
 html{
     padding: 30px;
     margin-left: auto;
@@ -9,7 +15,7 @@ html{
 body{
     font-family: Calibri;
     background-color: #93998c;
-    color: #23232d;
+    color: var(--text-color);
 }
 
 /* Posicion absoluta para que se extienda de lado a lado  */
@@ -36,15 +42,9 @@ h2{
     font-size: 1,2em;
     font-family: Verdana;
     color: #dcd8d6; 
-    margin: 20px 0px 20px 0px;
-    
+    margin: 20px 0px 20px 0px; 
 }
 
-h3{
-    font-size: 1.1em;
-    font-family: Calibri;
-    margin: 10px 0px 5px 0px;
-}
 
 /* Imagen */
 .imgGroup {
@@ -105,7 +105,7 @@ tr:nth-child(odd){
 /* Toda fila de TD cambia de color al pasar el raton por encima */
 tr:hover td{
     background-color: #868181;
-    color: #23232d;
+    color: var(--text-color);
 }
 
 /* Dibujamos una linea horizontal entre las filas */
@@ -118,11 +118,22 @@ form{
     padding:0px 10px 5px 10px;
 }
 
+fieldset{
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+legend{
+    padding: 3px 5px 0px 5px;
+    font-family: Helvetica, Arial, sans-serif;;
+    font-size: 1.05em;
+    font-weight: bold;
+}
+
 /* Como se aconsejaba usar label, pues le doy el formato de un h2 */
 label{
     display: block;
-    font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 input[type=number],input[type=text],input[type=date] , select{
@@ -200,6 +211,8 @@ input[type=text]::placeholder {
 .payContainer {
     display: flex;
     flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
     gap: 15px;
 
 }
