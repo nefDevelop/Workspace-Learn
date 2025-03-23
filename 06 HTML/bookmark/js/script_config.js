@@ -1,6 +1,6 @@
 async function cargarConfig() {
     try {
-        const response = await fetch('config.json'); // Cargar JSON
+        const response = await fetch('js/config.json'); // Cargar JSON
         if (!response.ok) throw new Error(`Error al cargar JSON: ${response.status}`);
 
         const data = await response.json(); // Convertir a objeto JS

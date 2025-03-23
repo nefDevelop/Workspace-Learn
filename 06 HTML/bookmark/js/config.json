@@ -1,16 +1,26 @@
 {
   "links": {
     "Externos": {
-      "Bandeja Gmail": "https://www.google.com",
+      "Bandeja Gmail": "http://mail.google.com/",
       "Github": "https://github.com"
 
     },
-    "Sd": {
-      "Google": "https://www.google.com",
-      "Github": "https://github.com"
+    "Cursos": {
+      "freeCodeCamp": "https://www.freecodecamp.org/learn/",
+      "Ilerna": "https://campus.ilerna.com/ultra/course",
+      "IBM": "https://skills.yourlearning.ibm.com/",
+      "Javascript": "https://es.javascript.info/"
 
     },
-    "host": {
+    "IA":{
+      "ChatGPT": "https://chatgpt.com/",
+      "Claude": "https://claude.ai/",
+      "Deepseek": "https://chat.deepseek.com/",
+      "Gemini": "https://gemini.google.com",
+      "Suno": "https://suno.com/",
+      "Red Panda AI": "https://redpandaai.com/"      
+    },
+    "serverExt": {
       "Archivo": "http://archivo.734038.xyz",
       "Syncthing": "http://sync.734038.xyz",
       "Biblioteca": "http://archivo.734038.xyz",
@@ -45,8 +55,8 @@
       "jellyseer": "http://192.168.30.30:8606",
       "penpot": "http://192.168.30.30:9001",
       "gonic": "http://192.168.30.30:88106",
-      "jellyfin": "http://192.168.30.30:8105",
-      "jellyAMP": "http://192.168.30.30:8107/"
+      "jellyfin": "http://192.168.30.30:8103",
+      "jellyAMP": "http://192.168.30.30:8105/"
     }
   },
   "settings": {
