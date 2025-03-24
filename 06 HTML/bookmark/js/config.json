@@ -1,9 +1,17 @@
 {
   "links": {
-    "Externos": {
-      "Bandeja Gmail": "http://mail.google.com/",
-      "Github": "https://github.com"
+    "~\\Externos": {
+      "color":"--color-ext",
+      "items":{
+        "Bandeja Gmail": {
+          "url":"http://mail.google.com/",
+          "icon":"fa-envelope",
+          "description":"Bandeja de correos Gmail"
+        },
+        "Github": "https://github.com"
 
+
+      }
     },
     "Cursos": {
       "freeCodeCamp": "https://www.freecodecamp.org/learn/",
@@ -63,7 +71,8 @@
     "theme": "dark",
     "language": "es",
     "columns": 3,
-    "name": "Nef734"
+    "name": "Nef734",
+    "imageRandom": false
   }
   }
   

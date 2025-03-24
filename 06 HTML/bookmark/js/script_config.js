@@ -10,20 +10,35 @@ async function cargarConfig() {
         const linksContainer = document.getElementById("mainlinks");
         linksContainer.innerHTML = ""; // Limpiar contenido anterior
 
-        Object.entries(data.links).forEach(([categoria, enlaces]) => {
+        Object.entries(data.links).forEach(([categoria, datos]) => {
             const columna = document.createElement("div");
             columna.classList.add("column"); // Crear columna
 
             const categoriaElemento = document.createElement("h3");
             categoriaElemento.textContent = categoria;
+            categoriaElemento.style.color = `var(${datos.color})`;
+
             columna.appendChild(categoriaElemento); // Agregar título dentro de la columna
 
-            Object.entries(enlaces).forEach(([nombre, url]) => {
+            Object.entries(datos.items).forEach(([nombre, info]) => {
                 const link = document.createElement("a");
-                link.href = url;
+                link.href = info.url;
                 link.textContent = nombre;
                 link.target = "_blank";
                 link.classList.add("link-item");
+
+                // Agregar tooltip con la descripción
+                if (info.description) {
+                    link.title = info.description;
+                }
+
+                // Agregar icono si está definido
+                if (info.icon) {
+                    const icono = document.createElement("i");
+                    icono.className = info.icon;
+                    icono.style.width = "1rem";
+                    link.prepend(icono);
+                }
 
                 columna.appendChild(link); // Agregar enlace dentro de la columna
             });
@@ -31,7 +46,7 @@ async function cargarConfig() {
             linksContainer.appendChild(columna); // Agregar columna al contenedor principal
         });
 
-        // Aplicar configuraciones
+        // Aplicar configuraciones globales
         document.body.style.background = data.settings.theme === "dark" ? "#222" : "#fff";
         document.body.style.color = data.settings.theme === "dark" ? "#fff" : "#000";
 
@@ -39,6 +54,7 @@ async function cargarConfig() {
         console.error("Error cargando JSON:", error);
     }
 }
+
 
 document.addEventListener("DOMContentLoaded", cargarConfig);
 
