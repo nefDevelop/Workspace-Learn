@@ -21,26 +21,39 @@ async function cargarConfig() {
             columna.appendChild(categoriaElemento); // Agregar título dentro de la columna
 
             Object.entries(datos.items).forEach(([nombre, info]) => {
+                const linkContainer = document.createElement("div");
+                linkContainer.classList.add("link-item");
+
                 const link = document.createElement("a");
                 link.href = info.url;
                 link.textContent = nombre;
                 link.target = "_blank";
-                link.classList.add("link-item");
 
-                // Agregar tooltip con la descripción
-                if (info.description) {
-                    link.title = info.description;
-                }
+                // // Agregar tooltip con la descripción
+                // if (info.description) {
+                //     link.title = info.description;
+                // }
 
                 // Agregar icono si está definido
                 if (info.icon) {
                     const icono = document.createElement("i");
                     icono.className = info.icon;
-                    icono.style.width = "1rem";
+                    // icono.style.fontSize = "1.5rem"; // Corregido el tamaño
+                    // icono.style.marginRight = "1.2rem"; // Espacio entre icono y texto
                     link.prepend(icono);
                 }
 
-                columna.appendChild(link); // Agregar enlace dentro de la columna
+                linkContainer.appendChild(link);
+
+                // Agregar la descripción debajo del enlace (opcional)
+                if (info.description) {
+                    const description = document.createElement("span");
+                    description.textContent = info.description;
+                    description.classList.add("link-description");
+                    linkContainer.appendChild(description);
+                }
+
+                columna.appendChild(linkContainer); // Agregar enlace dentro de la columna
             });
 
             linksContainer.appendChild(columna); // Agregar columna al contenedor principal
@@ -54,6 +67,7 @@ async function cargarConfig() {
         console.error("Error cargando JSON:", error);
     }
 }
+
 
 
 document.addEventListener("DOMContentLoaded", cargarConfig);

@@ -80,24 +80,33 @@ div h3 {
 
 .link-item {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   flex-wrap: wrap; 
-  align-items: center;
-  text-decoration: none;
   color: var(--text-color);
-  font-weight: 200;
+  font-weight: 500;
   margin-bottom: 8px;
   font-family: "Atkinson Hyperlegible Next";
   font-size: 1.2rem;
-  gap: 6px;
+  gap: 1rem;
+  text-decoration: none !important;
 }
 
 .link-item i {
-  font-size: 1rem !important; /* Tamaño más adaptable */
+  font-size: 1.5rem; /* Tamaño más adaptable */
   width: auto !important; 
   height: auto !important;
   flex-shrink: 0; /* Evita que el icono se reduzca */
   overflow: visible;
   display: inline-block;
+  margin-right: 1.2rem;
+}
+
+.link-description {
+  font-size: 0.9rem;
+  color: #bbbbbb93;
+  padding-top:0;
+  margin-left: 2.1rem;
 }
 
 .link-item:hover {

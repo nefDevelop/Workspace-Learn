@@ -5,17 +5,31 @@
       "items":{
         "Bandeja Gmail": {
           "url":"http://mail.google.com/",
-          "icon":"fa-envelope",
+          "icon":"fa-inbox",
           "description":"Bandeja de correos Gmail"
         },
-        "Github": "https://github.com"
-
-
+        "Github": {
+          "url":"http://mail.google.com/",
+          "icon":"fa-github",
+          "description":"GitHub"
+        }
       }
     },
-    "Cursos": {
-      "freeCodeCamp": "https://www.freecodecamp.org/learn/",
-      "Ilerna": "https://campus.ilerna.com/ultra/course",
+    "~\\Cursos": {
+      "color":"--color-ext",
+      "items":{
+        "freeCodeCamp": {
+          "url":"https://www.freecodecamp.org/learn/",
+          "icon":"fa-laptop-code",
+          "description":"Bandeja de correos Gmail"
+        },
+        "Ilerna": {
+          "url":"https://campus.ilerna.com/ultra/course",
+          "icon":"fa-chalkboard-user",
+          "description":"GitHub"
+        }
+      },
+
       "IBM": "https://skills.yourlearning.ibm.com/",
       "Javascript": "https://es.javascript.info/"
 
