@@ -20,7 +20,7 @@
       "items":{
         "freeCodeCamp": {
           "url":"https://www.freecodecamp.org/learn/",
-          "icon":"fa-laptop-code",
+          "icon":"",
           "description":"freeCodeCamp"
         },
         "Ilerna": {

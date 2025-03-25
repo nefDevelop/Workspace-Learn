@@ -90,16 +90,20 @@ div h3 {
 
 .link-item a{
   font-family: "Atkinson Hyperlegible Next";
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 400;
   color: var(--text-color);
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .link-item i {
-  font-size: 1.1rem; /* Ajusta el tamaño del icono */
-  margin-bottom: 11px; /* Espacio entre el icono y el enlace */
-  margin-right: 1em;
+  min-width: 1rem;
+  font-size: 1.9rem; /* Ajusta el tamaño del icono */
+  margin-bottom: 7px; /* Espacio entre el icono y el enlace */
+  margin-right: 0.6rem;
+
 }
 
 .link-item a:hover {
@@ -107,9 +111,11 @@ div h3 {
 }
 
 .description {
+  display: flex;
   font-size: 0.85rem;
   color: #aaa;
-  margin-top: 4px; /* Ajusta la separación con el enlace */
+  margin-top: 0px; /* Ajusta la separación con el enlace */
+  margin-bottom: 1rem;
 }
 
 
