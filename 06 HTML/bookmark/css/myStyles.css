@@ -213,6 +213,13 @@ div h3 {
 /* Responsivo a menos de 600px */
 @media (max-width: 600px) {
 
+  h1 {
+    display: block;
+    text-wrap-mode: nowrap;
+    font-size: 5vw;
+    margin-bottom: 2rem;
+  }
+
   .main_container {
     display: flex;
     flex-direction: column; 

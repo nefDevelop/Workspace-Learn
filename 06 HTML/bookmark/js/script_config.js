@@ -108,16 +108,25 @@ document.addEventListener("DOMContentLoaded", function () {
             finalTheme = prefersDark ? `${baseTheme}-dark` : `${baseTheme}-light`;
         }
 
+        // Establecer el atributo 'data-theme' en el documento
         document.documentElement.setAttribute("data-theme", finalTheme);
 
         // Cambiar la imagen según el tema
+        updateThemeImage(finalTheme);
+    }
+
+    function updateThemeImage(finalTheme) {
+        const themeName = finalTheme.split('-')[0]; // Obtener el nombre del tema (sin "dark" o "light")
+
+        // Cambiar la imagen según el tema y modo
         if (finalTheme.includes("dark")) {
-            themeImage.src = "img/dark-theme-image.png";  // Imagen para el tema oscuro
+            themeImage.src = `img/${themeName}-dark.png`;  // Imagen para el tema oscuro
         } else {
-            themeImage.src = "img/light-theme-image.png";  // Imagen para el tema claro
+            themeImage.src = `img/${themeName}-light.png`;  // Imagen para el tema claro
         }
     }
 });
+
 
 
 
