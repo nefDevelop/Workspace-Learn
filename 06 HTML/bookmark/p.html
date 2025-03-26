@@ -5,11 +5,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prueba Font Awesome</title>
     <link rel="stylesheet" href="css/all.css">
+    <style>
+        root {
+            --circle-diameter: 40px;
+        }
+
+        /* Estilo para el menú desplegable */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* 🌿 Catppuccin Latte (claro) */
+        [data-theme="catppuccin-light"] {
+            --bg-color: #f5e0dc;
+            --text-color: #575279;
+            --card-bg: #f2cdcd;
+            --card-border: #d7827e;
+            --bg-image: url('img-light.jpg'); /* Imagen para el tema claro */
+        }
+
+        /* 🌑 Catppuccin Mocha (oscuro) */
+        [data-theme="catppuccin-dark"] {
+            --bg-color: #1e1e2e;
+            --text-color: #cdd6f4;
+            --card-bg: #313244;
+            --card-border: #f38ba8;
+            --bg-image: url('img-dark.jpg'); /* Imagen para el tema oscuro */
+        }
+
+        /* ❄️ Nord Light */
+        [data-theme="nord-light"] {
+            --bg-color: #eceff4;
+            --text-color: #2e3440;
+            --card-bg: #e5e9f0;
+            --card-border: #81a1c1;
+            --bg-image: url('img-light.jpg');
+        }
+
+        /* 🌌 Nord Dark */
+        [data-theme="nord-dark"] {
+            --bg-color: #2e3440;
+            --text-color: #d8dee9;
+            --card-bg: #3b4252;
+            --card-border: #88c0d0;
+            --bg-image: url('img-dark.jpg');
+        }
+
+        /* 🔄 Modo automático: define un tema según el sistema */
+        [data-theme="auto"] {
+            --bg-color: white;
+            --text-color: black;
+            --bg-image: url('img-light.jpg');
+        }
+
+        /* Si el sistema está en modo oscuro, usa la versión oscura del tema */
+        @media (prefers-color-scheme: dark) {
+            [data-theme="auto"] {
+                --bg-color: #282a36;
+                --text-color: #f8f8f2;
+                --bg-image: url('img-dark.jpg');
+            }
+        }
+
+        /* Aplicar estilos generales */
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            background-image: var(--bg-image); /* Usar la imagen de fondo según el tema */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownLinks = document.querySelectorAll(".dropdown-content a");
+
+            // Obtener el tema guardado o por defecto "auto"
+            const savedTheme = localStorage.getItem("theme") || "auto";
+            setTheme(savedTheme);
+
+            // Manejar la selección del tema al hacer clic en los enlaces
+            dropdownLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    const selectedTheme = link.dataset.theme;
+                    setTheme(selectedTheme);
+                    localStorage.setItem("theme", selectedTheme);
+                });
+            });
+
+            function setTheme(baseTheme) {
+                let finalTheme = baseTheme;
+
+                if (baseTheme !== "auto") {
+                    // Si el usuario eligió un tema, decidir si se usa la versión clara u oscura
+                    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                    finalTheme = prefersDark ? `${baseTheme}-dark` : `${baseTheme}-light`;
+                }
+
+                document.documentElement.setAttribute("data-theme", finalTheme);
+            }
+        });
+    </script>
 </head>
 <body>
+    <!-- Menú desplegable -->
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn"><div class="divided-circle"><div></a>
+            <div class="dropdown-content">
+                <a href="#" data-theme="auto"><div class="divided-circle">Nord<div></a>
+                <a href="#" data-theme="catppuccin"><span class="divided-circle"><span></a>
+                <a href="#" data-theme="nord"><span class="divided-circle"><span></a>
+                <a href="#" data-theme="custom"><span class="divided-circle"><span></a>
+            </div>
+        </li>
+    </ul>
     <h1>Prueba de Iconos</h1>
-    <i class="fas fa-check"></i> ✔ Ícono de check <br>
-    <i class="fas fa-home"></i> 🏠 Ícono de casa <br>
-    <i class="fab fa-github"></i> 🐙 Ícono de GitHub <br>
+    <div class="link-item">
+        <a href="#">
+            <i class="fas fa-inbox"></i>
+            <div class="text-container">
+                <span class="title">Email</span>
+                <span class="description">Descripción</span>
+            </div>
+        </a>
+    </div>
+    <i class="fas fa-home"></i> Ícono de casa <br>
+    <i class="fab fa-github"></i> Ícono de GitHub <br>
 </body>
 </html>

@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starpage - </title> <!--json titulo-->
-    <!-- <link rel="stylesheet" href="css/w3css.cs"> -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/w3css.css">
     <link rel="stylesheet" href="css/myStyles.css">
     <link rel="stylesheet" href="css/all.css">
     <script src="js/script_config.js" defer></script>
@@ -17,7 +17,15 @@
         <a href="#" class="w3-bar-item w3-button">Bookmark</a>
         <a href="#" class="w3-bar-item w3-button">Test</a>
         <a href="#" class="w3-bar-item w3-button">Search</a>
-        <a href="#" class="w3-bar-item w3-button w3-right">thm</a>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button">Dropdown</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4 dropdown-content">
+            <a href="#" class="w3-bar-item w3-button" data-theme="auto">hg</a>
+            <a href="#" class="w3-bar-item w3-button" data-theme="catppuccin"><span class="w3-bar-item w3-button"><span></a>
+            <a href="#" class="w3-bar-item w3-button" data-theme="nord"><span class=""><span></a>
+            <a href="#" class="w3-bar-item w3-button" data-theme="custom"><span class=""><span></a>
+            </div>
+        </div>
         <input type="text" class="w3-bar-item w3-right " placeholder="Buscar...">
     </div>
     
@@ -27,7 +35,7 @@
     <div class="main_container">
         <div id="mainlinks"></div>
         <div class="image-container">
-            <img src="img/01.png" alt="background">
+            <img id="theme-image" src="img/01.png" alt="background">
         </div>
     </div>
     

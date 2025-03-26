@@ -1,7 +1,7 @@
 {
   "links": {
     "~\\Externos": {
-      "color":"--color-ext",
+      "color":"--col-ext",
       "items":{
         "Bandeja Gmail": {
           "url":"http://mail.google.com/",
@@ -10,13 +10,13 @@
         },
         "Github": {
           "url":"http://mail.google.com/",
-          "icon":"fas fa-github",
+          "icon":"fab fa-github",
           "description":"GitHub"
         }
       }
     },
     "~\\Cursos": {
-      "color":"--color-cur",
+      "color":"--col-cur",
       "items":{
         "freeCodeCamp": {
           "url":"https://www.freecodecamp.org/learn/",

@@ -17,71 +17,110 @@ async function cargarConfig() {
             const categoriaElemento = document.createElement("h3");
             categoriaElemento.textContent = categoria;
             categoriaElemento.style.color = `var(${datos.color})`;
-
             columna.appendChild(categoriaElemento); // Agregar título dentro de la columna
-            
-            const divLinks = document.createElement("div");
-            divLinks.classList.add("divlinks"); // Crear columna
-            
+
             Object.entries(datos.items).forEach(([nombre, info]) => {
                 const linkContainer = document.createElement("div");
                 linkContainer.classList.add("link-item");
 
                 const link = document.createElement("a");
                 link.href = info.url;
-                link.textContent = nombre;
                 link.target = "_blank";
+                link.classList.add("link");
 
-                // // Agregar tooltip con la descripción
-                // if (info.description) {
-                //     link.title = info.description;
-                // }
-
-                // Agregar icono si está definido
+                // Crear icono
                 if (info.icon) {
                     const icono = document.createElement("i");
                     icono.className = info.icon;
-                    link.prepend(icono);
+                    link.appendChild(icono);
                 }
 
-                linkContainer.appendChild(link);
+                // Contenedor de texto
+                const textContainer = document.createElement("div");
+                textContainer.classList.add("text-container");
 
-                // Agregar la descripción debajo del enlace (opcional)
+                // Agregar título
+                const title = document.createElement("span");
+                title.textContent = nombre;
+                title.classList.add("title");
+                textContainer.appendChild(title);
+
+                // Agregar descripción debajo (opcional)
                 if (info.description) {
                     const description = document.createElement("span");
                     description.textContent = info.description;
                     description.classList.add("description");
-                    linkContainer.appendChild(description);
+                    textContainer.appendChild(description);
                 }
 
-                columna.appendChild(linkContainer); // Agregar enlace dentro de la columna
+                link.appendChild(textContainer);
+                linkContainer.appendChild(link);
+                columna.appendChild(linkContainer);
             });
 
             linksContainer.appendChild(columna); // Agregar columna al contenedor principal
         });
-
-        // Aplicar configuraciones globales
-        // document.body.style.background = data.settings.theme === "dark" ? "#222" : "#fff";
-        // document.body.style.color = data.settings.theme === "dark" ? "#fff" : "#000";
 
     } catch (error) {
         console.error("Error cargando JSON:", error);
     }
 }
 
-
 async function showName() {
-    const response = await fetch('js/config.json'); // Cargar JSON
-    // if (!response.ok) throw new Error(`Error al cargar JSON: ${response.status}`);
-    
-    const data = await response.json(); // Convertir a objeto JS
-    console.log(data); // Ver en consola
-    
-    const targetElement = document.getElementById("divName"); 
-    
-    targetElement.textContent = data.settings.name;  // Agregar título dentro de la columna
-    
+    try {
+        const response = await fetch('js/config.json'); // Cargar JSON
+        if (!response.ok) throw new Error(`Error al cargar JSON: ${response.status}`);
+        
+        const data = await response.json(); // Convertir a objeto JS
+        console.log(data); // Ver en consola
+        
+        const targetElement = document.getElementById("divName"); 
+        targetElement.textContent = data.settings.name;  // Agregar título dentro de la columna
+
+    } catch (error) {
+        console.error("Error cargando JSON:", error);
+    }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownLinks = document.querySelectorAll(".dropdown-content a");
+    const themeImage = document.getElementById("theme-image"); // Seleccionamos la imagen
+
+    // Obtener el tema guardado o por defecto "auto"
+    const savedTheme = localStorage.getItem("theme") || "auto";
+    setTheme(savedTheme);
+
+    // Manejar la selección del tema al hacer clic en los enlaces
+    dropdownLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            const selectedTheme = link.dataset.theme;
+            setTheme(selectedTheme);
+            localStorage.setItem("theme", selectedTheme);
+        });
+    });
+
+    function setTheme(baseTheme) {
+        let finalTheme = baseTheme;
+
+        if (baseTheme !== "auto") {
+            // Si el usuario eligió un tema, decidir si se usa la versión clara u oscura
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            finalTheme = prefersDark ? `${baseTheme}-dark` : `${baseTheme}-light`;
+        }
+
+        document.documentElement.setAttribute("data-theme", finalTheme);
+
+        // Cambiar la imagen según el tema
+        if (finalTheme.includes("dark")) {
+            themeImage.src = "img/dark-theme-image.png";  // Imagen para el tema oscuro
+        } else {
+            themeImage.src = "img/light-theme-image.png";  // Imagen para el tema claro
+        }
+    }
+});
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", showName);
