@@ -21,12 +21,12 @@ body{
     color: var(--text-color);
 }
 
-/* Posicion absoluta para que se extienda de lado a lado  */
+/* Posicion absoluta para que se extienda de lado a lado y lo podamos poner abajo. */
 footer{
     position: absolute;
     left: 0px;
-    width:100vw;
-    height: 50px;
+    width: 100vw;
+    min-height: auto;
     background-color: #23232d;
     padding: 30px 0px;
     color: #93998c;
@@ -89,7 +89,6 @@ table {
     width:100%;
 }
 
-
 /* Header de la tabla */
 th {
     font-family: Helvetica, Arial, sans-serif;
@@ -136,6 +135,7 @@ form{
     padding:0px 10px 5px 10px;
 }
 
+/* Estilo del fieldset y del legend. Se redondean esquinas y se da padding */
 fieldset{
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
@@ -176,20 +176,18 @@ input[type=text]::placeholder {
     opacity: 1; 
 }
 
-  
 .pDescription{
     z-index: 1;
     min-width: 400px;
     max-width: 800px;
     margin: 20px 0px;
     padding: 30px 25px;
-    background-color:#dcd8d6;
     text-align:justify;
+    background-color:#dcd8d6;
     border-radius: 16px 16px 16px 16px;
     box-shadow: 4px 0 7px 0 #00000012, -4px 0 7px 0#00000012;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .formContainer{
@@ -247,8 +245,27 @@ input[type=text]::placeholder {
     height: auto;
 }
 
-#agreeTerms{
+/* Estilo para el div donde esta el chek de aceptar condiciones */
+.agreeTerms{
     margin: 0 ;
     padding-top: 25px;
     font-size: 1.1em;
+}
+
+
+/* Css para la zona de confirmacion */
+
+p.pConfirmacionCompra{
+    padding-left: 2rem;
+    padding-bottom: 0%;
+    font-size: 1.08rem;
+    font-weight: bold;
+
+    label, label#agreeTerms{
+        padding-left: 5px;
+        display: inline;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
 }

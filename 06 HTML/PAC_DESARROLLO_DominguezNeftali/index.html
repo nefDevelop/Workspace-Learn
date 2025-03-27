@@ -79,18 +79,17 @@
             <!-- o Debe permitir al usuario seleccionar la fecha y 
              el lugar del concierto. -->
             <fieldset> <legend>Informacion Personal</legend>
-                <label for="name">Nombre:</label><input type="text" id="name" required placeholder="Nombre">
-                <label for="surname">Apellidos:</label><input type="text" id="surname" required placeholder="Apellidos">
-                <label for="id_number">DNI:</label><input type="text" id="id_number" required placeholder="Numero de DOI">
+                <label>Nombre:</label><input type="text" name="name" id="name" required placeholder="Nombre">
+                <label>Apellidos:</label><input type="text" name="surname" id="surname" required placeholder="Apellidos">
+                <label>DNI:</label><input type="text" name="id" id="id" required placeholder="Numero de DOI">
             </fieldset>
-            <br>
 
             <fieldset> <legend> Detalles del evento</legend>
             <label>Detalles del evento:</label>
-            <input type="date" id="date" required>
+            <input type="date" id="date" name="date" required>
 
             <label>Lugar del concierto:</label>
-            <select name="concerts" id="concertDayPlace" required>
+            <select name="place" id="place" required>
                 <option value="">Elige lugar</option>
                 <option value="Unipol Arena - Bologna, Italia">Unipol Arena, Bologna (Italia)</option>
                 <option value="Movistar Arena - Madrid, España">Movistar Arena - Madrid, (España)</option>
@@ -100,14 +99,14 @@
 
             <!-- Categoria de la entrada -->
             <label>Categoría</label>
-            <select name="categoria" id="ticketCategoria" required>
+            <select name="category" id="category" required>
                 <option value="General">General</option>
                 <option value="Premium">Premium</option>
             </select>
 
             <label>Número de entradas</label>
             <!-- o Debe incluir opciones para elegir la cantidad de entradas y la categoría. -->
-            <input type="number" id="cantidad" name="nEntradas" min="1" value="" palceholder="" required>
+            <input type="number" id="numberT" name="numberT" min="1" value="" palceholder="" required>
             </fieldset>
 
             <fieldset> <legend>Metodos de pago</legend>
@@ -116,31 +115,31 @@
             <label for="payment">Elige un método:</label>
             <div class="payContainer">
                 <label>
-                    <input type="radio" value="bizum" name="metodoPago">
+                    <input type="radio" value="Bizum" name="pay">
                     <img class="imgPagos" src="img/bizum.png" alt="bizum">
                 </label>
                 <label>
-                    <input type="radio" value="paypal" name="metodoPago">
+                    <input type="radio" value="Paypal" name="pay">
                     <img class="imgPagos" src="img/paypal.png" alt="paypal">
                 </label>
                 <label>
-                    <input type="radio" value="mastercard" name="metodoPago">
+                    <input type="radio" value="Mastercard" name="pay">
                     <img class="imgPagos" src="img/master.png" alt="mastercard">
                 </label>
                 <label>
-                    <input type="radio" value="visa" name="metodoPago">
+                    <input type="radio" value="Visa" name="pay">
                     <img class="imgPagos" src="img/visa.png" alt="visa">
                 </label>
             </div>
-        </fieldset>
+            </fieldset>
             <!-- o Un checkbox obligatorio para aceptar los términos y condiciones. -->
-            <div id="agreeTerms"><input type="checkbox" required>Acepta las condiciones.</div>
+            <div class="agreeTerms"><input name="agreeTerms" id="agreeTerms" type="checkbox" required>Acepta las condiciones.</div>
 
             <!-- 5. Botón de Confirmación:
             o Estilizado con color de fondo azul y texto blanco.
             o Al pasar el mouse sobre él, debe cambiar ligeramente de color.
             o Debe enviar los datos a la página de confirmación mediante JavaScript -->
-            <div class="button-center"><input id="submit" type="submit" value="Comprar entrada"></input></div>
+            <div class="button-center"><input id="submit" type="submit" value="Comprar entrada" onclick="saveCompra()"></input></div>
         </form>
     </div>
     <footer>🎧 Made by: Neftalí Domínguez Urda. 🎧 <br>For DAW - Lenguaje de Marcas</footer>
