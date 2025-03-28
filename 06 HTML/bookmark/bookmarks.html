@@ -5,31 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starpage - </title> <!--json titulo-->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/w3css.css">
+    <!-- <link rel="stylesheet" href="css/w3css.css"> -->
     <link rel="stylesheet" href="css/myStyles.css">
     <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/dropdown.css"
     <script src="js/script_config.js" defer></script>
 </head>
 
 <body>
-    <div class="w3-bar w3-mobile">
-        <a href="#" class="w3-bar-item w3-button">Inicio</a>
-        <a href="#" class="w3-bar-item w3-button">Bookmark</a>
-        <a href="#" class="w3-bar-item w3-button">Test</a>
-        <div class="w3-dropdown-hover">
-            <button class="w3-button">Dropdown</button>
-            <div class="w3-dropdown-content w3-bar-block w3-card-4 dropdown-content">
-            <a href="#" class="w3-bar-item w3-button" data-theme="auto">hg</a>
-            <a href="#" class="w3-bar-item w3-button" data-theme="catppuccin"><span class="theme-catapuccin"><span></a>
-            <a href="#" class="w3-bar-item w3-button" data-theme="nord"><span class=""><span></a>
-            <a href="#" class="w3-bar-item w3-button" data-theme="custom"><span class=""><span></a>
+    <div class="dropdown">
+        <a href="#" class="dropdown-button">Inicio</a>
+        <a href="#" class="dropdown-button">Bookmark</a>
+        <a href="#" class="dropdown-button">Test</a>
+        <div class="dropdown">
+            <button class="dropdown-button">Dropdown</button>
+            <div class="dropdown-content">
+            <a href="#" class="dropdown-button" data-theme="auto">hg</a>
+            <a href="#" class="dropdown-button" data-theme="catppuccin"><span class="theme-catapuccin"><span></a>
+            <a href="#" class="dropdown-button" data-theme="nord"><span class="">s<span></a>
+            <a href="#" class="dropdown-button" data-theme="custom"><span class="">s<span></a>
             </div>
         </div>
     </div>
     
     <!-- Contenedor principal -->
     <h1>Bienvenido de nuevo, <span id="divName"></span> </h1>
-    <input type="text" id="searchBar" class="searchBar" placeholder="Buscar...">
+    <input type="text" id="searchBar" class="searchBar">
     
     <div class="main_container">
         <div id="mainlinks"></div>
