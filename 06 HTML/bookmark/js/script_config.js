@@ -128,8 +128,31 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Miramos si se pulsa \ para activar la busqueda
+document.addEventListener("keydown", function (event) {
+    const searchBar = document.getElementById("searchBar");
 
+    if (event.key === "\\" && document.activeElement !== searchBar) {
+        event.preventDefault(); // Evita que se escriba "/" en otro campo de texto
+        searchBar.style.display = "block"; // Muestra la barra de búsqueda
+        searchBar.focus(); // Enfoca la barra de búsqueda
+    } else if (event.key === "Escape") {
+        searchBar.style.display = "none"; // Oculta la barra con Escape
+        searchBar.value = ""; // Borra el texto al ocultar
+    }
+});
 
+// TODO:: Filtrar por buscador o motor. Se configura en json
+document.getElementById("searchBar").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        const query = event.target.value.trim();
+        if (query) {
+            window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, "_blank");
+            event.target.value = ""; // Limpia la barra
+            event.target.style.display = "none"; // Oculta la barra
+        }
+    }
+});
 
 
 document.addEventListener("DOMContentLoaded", showName);

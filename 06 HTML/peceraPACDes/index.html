@@ -79,13 +79,26 @@
     <!-- NO TOCAR -->
 
     <script>
-        const ruben = new Pez("Rubén", "img/pez1.png",0 ,90 ,"horizontal", "Moviendo a Ruben");    
-        ruben.mover();
+        // Declaramos los objetos necesarios
+        const ruben = new Pez("Rubén", "img/pez1.png",100 ,90 ,"horizontal", log);
+        const laura = new Pez("Laura", "img/pez2.png",56 ,220 ,"zigzag", log);    
+        const tamara = new Pez("Tamara", "img/pez3.png",70 ,90 ,"burbujaCascada", log);    
+        const tever = new Pez("Tever", "img/pez4.png",10 ,90 ,"horizontal", log);    
+        const caballito = new Pez("Caballito", "img/caballito.png",73 ,110 ,"zigzag", log);
         
-
-
-
-
+        // Le decimos a los objetos Pez, que tienen que moverse
+        ruben.mover();
+        laura.mover();
+        tamara.mover();
+        tever.mover();
+        caballito.mover();
+        
+        // Agregamos al array los objetos para que los vea el bucle de animar 
+        peces.push(laura);
+        peces.push(ruben);
+        peces.push(tamara);
+        peces.push(tever);
+        peces.push(caballito);
 
         animar();
     </script>

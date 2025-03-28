@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> se carga abajo para que se ejecute cuando este todo cargado -->
+
 </head>
 
 <!-- Body -->
 <body>
+
     <!-- 1. Encabezado: -->
     <!-- o Un título <h1> con el nombre del grupo musical. -->
-    <h1>twenty øne piløts</h1>
+        <h1>twenty øne piløts</h1>
     <!-- o Una imagen del grupo, la cual debe estar centrada y con bordes redondeados. -->
     <div class="imgContainer"><img class="imgGroup" src="img/grupo.png" alt="Grupo Twenty One Pilots"></div>
 
@@ -74,22 +76,22 @@
             </table>
         </div>
     <h2>Formulario de compra</h2>
-        <form action="confirmacion.html" class="form">
+        <form id="formulario" class="formC">
             <!-- 4. Formulario de Compra:-->
             <!-- o Debe permitir al usuario seleccionar la fecha y 
              el lugar del concierto. -->
             <fieldset> <legend>Informacion Personal</legend>
-                <label>Nombre:</label><input type="text" name="name" id="name" required placeholder="Nombre">
-                <label>Apellidos:</label><input type="text" name="surname" id="surname" required placeholder="Apellidos">
-                <label>DNI:</label><input type="text" name="id" id="id" required placeholder="Numero de DOI">
+                <label>Nombre:</label><input type="text" name="name" id="name" placeholder="Nombre">
+                <label>Apellidos:</label><input type="text" name="surname" id="surname" placeholder="Apellidos">
+                <label>DNI:</label><input type="text" name="id" id="id" placeholder="Numero de DOI">
             </fieldset>
 
             <fieldset> <legend> Detalles del evento</legend>
             <label>Detalles del evento:</label>
-            <input type="date" id="date" name="date" required>
+            <input type="date" id="date" name="date">
 
             <label>Lugar del concierto:</label>
-            <select name="place" id="place" required>
+            <select name="place" id="place">
                 <option value="">Elige lugar</option>
                 <option value="Unipol Arena - Bologna, Italia">Unipol Arena, Bologna (Italia)</option>
                 <option value="Movistar Arena - Madrid, España">Movistar Arena - Madrid, (España)</option>
@@ -99,14 +101,14 @@
 
             <!-- Categoria de la entrada -->
             <label>Categoría</label>
-            <select name="category" id="category" required>
+            <select name="category" id="category">
                 <option value="General">General</option>
                 <option value="Premium">Premium</option>
             </select>
 
             <label>Número de entradas</label>
             <!-- o Debe incluir opciones para elegir la cantidad de entradas y la categoría. -->
-            <input type="number" id="numberT" name="numberT" min="1" value="" palceholder="" required>
+            <input type="number" id="numberT" name="numberT" min="1" value="" palceholder="">
             </fieldset>
 
             <fieldset> <legend>Metodos de pago</legend>
@@ -133,14 +135,16 @@
             </div>
             </fieldset>
             <!-- o Un checkbox obligatorio para aceptar los términos y condiciones. -->
-            <div class="agreeTerms"><input name="agreeTerms" id="agreeTerms" type="checkbox" required>Acepta las condiciones.</div>
+            <label class="agreeTerms"><input name="agreeTerms" id="agreeTerms" type="checkbox" >Acepta las condiciones.</label>
 
             <!-- 5. Botón de Confirmación:
             o Estilizado con color de fondo azul y texto blanco.
             o Al pasar el mouse sobre él, debe cambiar ligeramente de color.
             o Debe enviar los datos a la página de confirmación mediante JavaScript -->
-            <div class="button-center"><input id="submit" type="submit" value="Comprar entrada" onclick="saveCompra()"></input></div>
+            <div class="button-center"><input id="submit" type="button" value="Comprar entrada"></input></div>
         </form>
     </div>
+    <script src="js/script.js"></script>
+
     <footer>🎧 Made by: Neftalí Domínguez Urda. 🎧 <br>For DAW - Lenguaje de Marcas</footer>
-</body>
+    </body>

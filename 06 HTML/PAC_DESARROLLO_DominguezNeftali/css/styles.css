@@ -49,6 +49,64 @@ h2{
 }
 
 
+
+INPUT[type=checkbox]
+{
+    background-color: #c5cabe;
+    border-radius: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin-right: 15px;
+    width: 17px;
+    height: 17px;
+    position: relative;
+    top: 5px;
+}
+
+INPUT[type=checkbox]:checked
+{
+    border: 2px solid var(--border-color);
+    background: #c5cdbe url("data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==") 2px 2px no-repeat;
+    background-color: #c5cabe;
+}
+   
+    
+    
+    
+/* Referencia a https://moderncss.dev/pure-css-custom-styled-radio-buttons/
+Adaptado al estilo de la pagina */
+
+input[type=radio]{
+    display: grid;
+    place-content: center;
+    appearance: none;
+    background-color: #c5cabe;
+    margin: 0;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid var(--border-color);
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    font: inherit;
+}
+  
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--text-color);
+}
+  
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+  
+
+
 /* Imagen */
 .imgGroup {
     display: flex;
@@ -131,7 +189,7 @@ td {
 }
 
 /* espacio interior al formulario */
-form{
+.formC{
     padding:0px 10px 5px 10px;
 }
 
@@ -152,6 +210,18 @@ legend{
 label{
     display: block;
     font-size: 1em;
+}
+
+.invalid {
+    border: 1px solid #fd9680 !important;
+    }
+
+input[type=radio].invalid {
+    outline: max(1px, 0.1em) solid #fd9680;
+}
+
+input[type=checkbox].invalid{
+    outline: max(3px, 0.1em) solid #fd9680;
 }
 
 
@@ -217,11 +287,20 @@ input[type=text]::placeholder {
     color:white;
 }
 
-#submit:hover{
+#submit:disabled{
+    border: 2px solid #919191;
+    background-color: #808080;
+    color:white;
+}
+
+/* Lo marcamos como azul cuando deje de estar disabled */
+#submit:not(:disabled):hover{
     border: 2px solid #3c3cbb;
     background-color: #3c3cbb;
     color:white;
 }
+
+
 
 /* Zona de pagos */
 
@@ -259,13 +338,13 @@ p.pConfirmacionCompra{
     padding-left: 2rem;
     padding-bottom: 0%;
     font-size: 1.08rem;
-    font-weight: bold;
+    font-weight: bold;    
+}
 
-    label, label#agreeTerms{
-        padding-left: 5px;
-        display: inline;
-        font-size: 1rem;
-        font-weight: 500;
-    }
-
+p.pConfirmacionCompra label,
+p.pConfirmacionCompra label#agreeTerms{
+    padding-left: 5px;
+    display: inline;
+    font-size: 1rem;
+    font-weight: 500;
 }

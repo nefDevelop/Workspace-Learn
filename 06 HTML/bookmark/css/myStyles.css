@@ -74,7 +74,13 @@ font-size: 1.4em;
   padding:10px;
 }
 
-
+.searchBar{
+  display: none; 
+  position: fixed; 
+  top: 10px; 
+  left: 50%; 
+  transform: translateX(-50%);
+}
 
 
 /* Links in column  */
@@ -97,7 +103,6 @@ font-size: 1.4em;
   font-size: 1.8rem; 
   margin-right: 0.5rem; 
   width: 30px;
-  
 }
 
 .link-item a:hover {
@@ -106,6 +111,11 @@ font-size: 1.4em;
 
 .link-item a:hover .title{
   color: #8f3a3a;
+}
+
+.link-item a:hover .description{
+  color: #745d5d;
+  transition: color 0.1s ease-in-out;
 }
 
 .link-item .text-container {
@@ -119,13 +129,15 @@ font-size: 1.4em;
   font-weight: bold;
   color: var(--text-color);
   transition: color 0.1s ease-in-out;
-
 }
 
 .link-item .description {
   font-size: 0.85rem;
   color: var(--text-title);
 }
+
+
+
 /*  */
 
 .image-container {
