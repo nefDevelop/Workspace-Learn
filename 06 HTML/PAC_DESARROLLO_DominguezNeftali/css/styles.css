@@ -1,0 +1,350 @@
+/* Hoja de Estilos */
+
+*{
+   --text-color: #23232d; 
+   --text-header: #193549;
+   --border-color: #5d6158d3;
+   --border-radius: 12px;
+   --spacing: 12px;
+}
+
+html{
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6em;
+}
+
+body{
+    font-family: Calibri;
+    background-color: #c5cabe;
+    color: var(--text-color);
+}
+
+/* Posicion absoluta para que se extienda de lado a lado y lo podamos poner abajo. */
+footer{
+    position: absolute;
+    left: 0px;
+    width: 100vw;
+    min-height: auto;
+    background-color: #23232d;
+    padding: 30px 0px;
+    color: #93998c;
+    text-align: center;
+}
+
+/* H Encabezados */
+h1{
+    text-align: center;
+    font-size: 2.5em;
+    font-family: Verdana;
+    color: var(--text-header);
+}
+
+h2{
+    font-size: 1.2em;
+    font-family: Verdana;
+    color: var(--text-header); 
+    margin: 15px 0px 0px 0px; 
+}
+
+
+
+INPUT[type=checkbox]
+{
+    background-color: #c5cabe;
+    border-radius: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin-right: 15px;
+    width: 17px;
+    height: 17px;
+    position: relative;
+    top: 5px;
+}
+
+INPUT[type=checkbox]:checked
+{
+    border: 2px solid var(--border-color);
+    background: #c5cdbe url("data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==") 2px 2px no-repeat;
+    background-color: #c5cabe;
+}
+   
+    
+    
+    
+/* Referencia a https://moderncss.dev/pure-css-custom-styled-radio-buttons/
+Adaptado al estilo de la pagina */
+
+input[type=radio]{
+    display: grid;
+    place-content: center;
+    appearance: none;
+    background-color: #c5cabe;
+    margin: 0;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid var(--border-color);
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    font: inherit;
+}
+  
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--text-color);
+}
+  
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+  
+
+
+/* Imagen */
+.imgGroup {
+    display: flex;
+    border-radius: var(--border-radius);
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 4px 0 7px 0 #00000056, -4px 0 7px 0#00000056;
+}
+
+.imgContainer{
+    min-width: 400px;
+    /* Mantenemos centrada la imagen con el padding */
+    padding: 0px 25px; 
+}
+
+/* Uso b y strong para diferenciar un poco */
+b{ 
+    font-weight:bold;
+    color: #141414b8;
+}
+
+strong{
+    font-weight:bold;
+}
+
+/* Tabla  --  Aqui editamos todos los componentes de respecto a la tabla*/
+.container-table{
+    margin: var(--spacing);
+}
+
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: var(--border-radius); 
+    border: 1px solid #5d6158;
+    width:100%;
+}
+
+/* Header de la tabla */
+th {
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 10px 0px;
+    background-color: #3b4231be;
+    color:#dcd8d6;
+}
+
+/* Redondear esquinas - Ayuda IA*/
+tr:first-child th:first-child { border-top-left-radius: var(--border-radius); }
+tr:first-child th:last-child { border-top-right-radius: var(--border-radius); }
+tr:last-child td:first-child { border-bottom-left-radius: var(--border-radius); }
+tr:last-child td:last-child { border-bottom-right-radius: var(--border-radius);; }
+
+
+/* Filas */
+td{
+    font-size: 15px;
+    text-align: center;
+    white-space: normal;
+    color: #dcd8d6;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Cada fila, empezando en impar, cambia de color alternando */
+tr:nth-child(odd){
+    background-color: #c8bbbb45;
+}
+
+/* Toda fila de TD cambia de color al pasar el raton por encima */
+tr:hover td{
+    background-color: #868181;
+    color: var(--text-color);
+}
+
+/* Dibujamos una linea horizontal entre las filas */
+td {
+    border-bottom: 1px solid #5d6158;
+}
+
+/* espacio interior al formulario */
+.formC{
+    padding:0px 10px 5px 10px;
+}
+
+/* Estilo del fieldset y del legend. Se redondean esquinas y se da padding */
+fieldset{
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+}
+
+legend{
+    padding: 3px 5px 0px 5px;
+    font-family: Helvetica, Arial, sans-serif;;
+    font-size: 1.05em;
+    font-weight: bold;
+}
+
+/* Como se aconsejaba usar label, pues le doy el formato de un h2 */
+label{
+    display: block;
+    font-size: 1em;
+}
+
+.invalid {
+    border: 1px solid #fd9680 !important;
+    }
+
+input[type=radio].invalid {
+    outline: max(1px, 0.1em) solid #fd9680;
+}
+
+input[type=checkbox].invalid{
+    outline: max(3px, 0.1em) solid #fd9680;
+}
+
+
+input[type=number],input[type=text],input[type=date] , select{
+    width:100% ;
+    padding:var(--spacing);
+    border:1px solid #5d6158d3;
+    color: #dcd8d6;
+    background-color: #7c8176;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+}
+
+input[type=number]:focus, input[type=text]:focus, input[type=date]:focus, select:focus{
+    outline:none;
+    border: 1px solid #93998c;
+}
+
+
+input[type=text]::placeholder {
+    color: #dcd8d6; 
+    opacity: 1; 
+}
+
+.pDescription{
+    z-index: 1;
+    min-width: 400px;
+    max-width: 800px;
+    margin: 20px 0px;
+    padding: 30px 25px;
+    text-align:justify;
+    background-color:#dcd8d6;
+    border-radius: 16px 16px 16px 16px;
+    box-shadow: 4px 0 7px 0 #00000012, -4px 0 7px 0#00000012;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formContainer{
+    min-width: 400px;
+    max-width: 800px;
+    margin: var(--spacing) 0;
+    margin-top: -33px;
+    padding: var(--spacing) 25px;
+    background-color:#7c8176;
+    border-radius: 0px 0px 16px 16px;
+    box-shadow: 4px 0 7px 0 #00000012, -4px 0 7px 0#00000012;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-center{
+    text-align: center;
+}
+
+#submit{
+    margin:5px 0;
+    padding:3px 1em;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    border: 2px solid blue;
+    background-color: blue;
+    color:white;
+}
+
+#submit:disabled{
+    border: 2px solid #919191;
+    background-color: #808080;
+    color:white;
+}
+
+/* Lo marcamos como azul cuando deje de estar disabled */
+#submit:not(:disabled):hover{
+    border: 2px solid #3c3cbb;
+    background-color: #3c3cbb;
+    color:white;
+}
+
+
+
+/* Zona de pagos */
+
+.payContainer {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing);
+    justify-content: center;
+
+}
+
+.payContainer label {
+    display: flex;
+    align-items: center; 
+    gap: 5px; 
+}
+
+.imgPagos
+{
+    width: 50px;
+    height: auto;
+}
+
+/* Estilo para el div donde esta el chek de aceptar condiciones */
+.agreeTerms{
+    margin: 0 ;
+    padding-top: 25px;
+    font-size: 1.1em;
+}
+
+
+/* Css para la zona de confirmacion */
+
+p.pConfirmacionCompra{
+    padding-left: 2rem;
+    padding-bottom: 0%;
+    font-size: 1.08rem;
+    font-weight: bold;    
+}
+
+p.pConfirmacionCompra label,
+p.pConfirmacionCompra label#agreeTerms{
+    padding-left: 5px;
+    display: inline;
+    font-size: 1rem;
+    font-weight: 500;
+}

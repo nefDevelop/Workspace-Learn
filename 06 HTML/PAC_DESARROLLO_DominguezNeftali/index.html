@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- Head -->
+<head lang="spa">
+    <title>Entradas de Twenty One Pilots</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <script src="js/script.js"></script> se carga abajo para que se ejecute cuando este todo cargado -->
+
+</head>
+
+<!-- Body -->
+<body>
+
+    <!-- 1. Encabezado: -->
+    <!-- o Un título <h1> con el nombre del grupo musical. -->
+        <h1>twenty øne piløts</h1>
+    <!-- o Una imagen del grupo, la cual debe estar centrada y con bordes redondeados. -->
+    <div class="imgContainer"><img class="imgGroup" src="img/grupo.png" alt="Grupo Twenty One Pilots"></div>
+
+    <!-- 2. Descripción del Grupo: -->
+    <!-- o Un párrafo con información sobre el grupo. -->
+    <p class="pDescription"><strong>Twenty One Pilots</strong> (estilizado en minúsculas como
+        twenty øne piløts) es un dúo musical estadounidense de Columbus, Ohio.
+        La banda se formó en 2009 por el vocalista <b>Tyler Joseph</b> junto con <b>Nick Thomas</b>
+        y <b>Chris Salih</b>, quienes la abandonaron en 2011. Desde su partida, la formación
+        ha consistido en el cantante <strong>Tyler Joseph</strong> y
+        el baterista <strong>Josh Dun</strong>. El grupo es principalmente conocido por los sencillos
+        <i>"Stressed Out"</i>, <i>"Ride"</i> y <i>"Heathens"</i>. El grupo recibió un
+        Premio Grammy al mejor pop de dúo/grupo en los Premios Grammy de 2017. </p>
+        <!-- o Esta sección debe destacarse visualmente con un fondo de color claro. -->
+
+
+    <div class="formContainer">
+    <!-- 3. Tabla con Fechas de Conciertos:
+    o Debe incluir al menos tres fechas de conciertos con información sobre el lugar, la hora y
+    el precio.
+    o Las filas de la tabla deben alternar colores para facilitar la lectura. -->
+    <h2>Proximas conciertos:</h2>
+        <div class="container-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Lugar</th>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>17 Abr, 2025</td>
+                        <td>Unipol Arena - Bologna, IT</td>
+                        <td>22:00</td>
+                        <td>60 €</td>
+                    </tr>
+                    <tr>
+                        <td>21 Abr, 2025</td>
+                        <td>Movistar Arena - Madrid, ES</td>
+                        <td>20:00</td>
+                        <td>65 €</td>
+                    </tr>
+                    <tr>
+                        <td>22 Abr, 2025</td>
+                        <td>Palau San Jordi - Barcelona, ES</td>
+                        <td>20:00</td>
+                        <td>65 €</td>
+                    </tr>
+                    <tr>
+                        <td>24 Abr, 2025</td>
+                        <td>LDLC Arena - Lyon, FR</td>
+                        <td>20:00</td>
+                        <td>65 €</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    <h2>Formulario de compra</h2>
+        <form id="formulario" class="formC">
+            <!-- 4. Formulario de Compra:-->
+            <!-- o Debe permitir al usuario seleccionar la fecha y 
+             el lugar del concierto. -->
+            <fieldset> <legend>Informacion Personal</legend>
+                <label>Nombre:</label><input type="text" name="name" id="name" placeholder="Nombre">
+                <label>Apellidos:</label><input type="text" name="surname" id="surname" placeholder="Apellidos">
+                <label>DNI:</label><input type="text" name="id" id="id" placeholder="Numero de DOI">
+            </fieldset>
+
+            <fieldset> <legend> Detalles del evento</legend>
+            <label>Detalles del evento:</label>
+            <input type="date" id="date" name="date">
+
+            <label>Lugar del concierto:</label>
+            <select name="place" id="place">
+                <option value="">Elige lugar</option>
+                <option value="Unipol Arena - Bologna, Italia">Unipol Arena, Bologna (Italia)</option>
+                <option value="Movistar Arena - Madrid, España">Movistar Arena - Madrid, (España)</option>
+                <option value="Palau San Jordi - Barcelona, España">Palau San Jordi - Barcelona, (España)</option>
+                <option value="LDLC Arena - Lyon, Francia">LDLC Arena - Lyon, (Francia)</option>
+            </select>
+
+            <!-- Categoria de la entrada -->
+            <label>Categoría</label>
+            <select name="category" id="category">
+                <option value="General">General</option>
+                <option value="Premium">Premium</option>
+            </select>
+
+            <label>Número de entradas</label>
+            <!-- o Debe incluir opciones para elegir la cantidad de entradas y la categoría. -->
+            <input type="number" id="numberT" name="numberT" min="1" value="" palceholder="">
+            </fieldset>
+
+            <fieldset> <legend>Metodos de pago</legend>
+            <!-- o Los métodos de pago deben mostrarse como botones de 
+             opción (radio). -->
+            <label for="payment">Elige un método:</label>
+            <div class="payContainer">
+                <label>
+                    <input type="radio" value="Bizum" name="pay">
+                    <img class="imgPagos" src="img/bizum.png" alt="bizum">
+                </label>
+                <label>
+                    <input type="radio" value="Paypal" name="pay">
+                    <img class="imgPagos" src="img/paypal.png" alt="paypal">
+                </label>
+                <label>
+                    <input type="radio" value="Mastercard" name="pay">
+                    <img class="imgPagos" src="img/master.png" alt="mastercard">
+                </label>
+                <label>
+                    <input type="radio" value="Visa" name="pay">
+                    <img class="imgPagos" src="img/visa.png" alt="visa">
+                </label>
+            </div>
+            </fieldset>
+            <!-- o Un checkbox obligatorio para aceptar los términos y condiciones. -->
+            <label class="agreeTerms"><input name="agreeTerms" id="agreeTerms" type="checkbox" >Acepta las condiciones.</label>
+
+            <!-- 5. Botón de Confirmación:
+            o Estilizado con color de fondo azul y texto blanco.
+            o Al pasar el mouse sobre él, debe cambiar ligeramente de color.
+            o Debe enviar los datos a la página de confirmación mediante JavaScript -->
+            <div class="button-center"><input id="submit" type="button" value="Comprar entrada"></input></div>
+        </form>
+    </div>
+    <script src="js/script.js"></script>
+
+    <footer>🎧 Made by: Neftalí Domínguez Urda. 🎧 <br>For DAW - Lenguaje de Marcas</footer>
+    </body>

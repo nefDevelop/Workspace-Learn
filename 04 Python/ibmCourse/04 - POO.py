@@ -1,0 +1,4 @@
+# Creamos clase
+
+class Coche():
+    
