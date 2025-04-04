@@ -1,0 +1,10 @@
+services:
+  gitea:
+    image: gitea/gitea
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+      - DB_PASSWORD=supersegura123
+    ports:
+      - "8301:3000"
+      - ":22"
