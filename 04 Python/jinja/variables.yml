@@ -1,0 +1,14 @@
+# Variables Generales
+user_uid: 1000
+user_gid: 1000
+db_password: supersegura123
+web_port_gitea: 8301
+ssh_port_gitea: 227
+
+## media / Carpetas
+
+
+## Puertos
+alist_port: 8002
+# Específicas
+# 
