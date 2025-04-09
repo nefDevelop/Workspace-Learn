@@ -1,3 +1,5 @@
 {
-    "livePreview.defaultPreviewPath": "/06 HTML/Javascript/01-StartDay.html"
+    "livePreview.defaultPreviewPath": "/06 HTML/Javascript/01-StartDay.html",
+    "localaipilot.standalone.ollamaModel": "codeqwen:latest",
+    "localaipilot.standalone.ollamaCodeModel": "starcoder2:latest"
 }

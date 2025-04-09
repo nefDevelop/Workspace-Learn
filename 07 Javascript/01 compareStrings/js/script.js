@@ -9,3 +9,4 @@ alert ('Z' > 'A'); //true
 alert ('Glow' > 'Glew'); //true
 alert ('Bee' > 'Be'); //true
 
+// Comparaciones de cadenas

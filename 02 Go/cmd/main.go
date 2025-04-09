@@ -7,4 +7,9 @@ func main() {
 
 	fmt.Scanln(&a)
 	fmt.Println("Hoola, holita vecinito " + a)
+
+	// # Commando console
+
 }
+
+
