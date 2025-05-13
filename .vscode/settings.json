@@ -1,5 +1,6 @@
 {
-    "livePreview.defaultPreviewPath": "/06 HTML/Javascript/01-StartDay.html",
-    "localaipilot.standalone.ollamaModel": "codeqwen:latest",
-    "localaipilot.standalone.ollamaCodeModel": "starcoder2:latest"
+  "livePreview.defaultPreviewPath": "/06 HTML/Javascript/01-StartDay.html",
+  "localaipilot.standalone.ollamaModel": "starcoder2:7b",
+  "localaipilot.standalone.ollamaCodeModel": "starcoder2:latest",
+  "python.analysis.autoImportCompletions": false
 }

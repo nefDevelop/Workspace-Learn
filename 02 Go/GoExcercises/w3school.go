@@ -23,5 +23,8 @@ func main() {
 
 	fmt.Println(len(array1))
 	fmt.Println(arr4)
+	fmt.Print("Compra uno: ", array1[0]) // Se puede acceder a un elemento de una matriz en Go sin necesidad de índice (es decir, fmt.print semántico equivalente para arrays). Por ejemplo "array[i]".}
+
+	//read docker socket
 
 }

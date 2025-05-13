@@ -1,0 +1,4 @@
+1,Papas,70
+2,Refresco,20
+3,Sandwich,100
+4,Pelad,23.434

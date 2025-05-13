@@ -5,8 +5,29 @@
 let num = 4 > 1; // true 4 mayor que 1
 
 // Cadenas
-alert ('Z' > 'A'); //true
-alert ('Glow' > 'Glew'); //true
-alert ('Bee' > 'Be'); //true
+alert('Z' > 'A'); //true
+alert('Glow' > 'Glew'); //true
+alert('Bee' > 'Be'); //true
 
-// Comparaciones de cadenas
+// Bucle while
+// while (condition){
+//     //
+//     //
+// }
+
+let i = 0;
+
+while (i < 5) {
+    alert(i)
+    i++;
+}
+
+
+do {
+
+    alert("Alert");
+    i = false;
+} while (i = false)
+
+
+
